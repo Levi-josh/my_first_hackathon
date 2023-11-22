@@ -150,7 +150,7 @@
     border-radius: 6px;
     border: 1px solid #000000;
     white-space: nowrap;
-
+    background-color: #FFFFFF;
     font-weight: bold;
     color: #323232;
 
@@ -185,8 +185,10 @@
     height: 124px;
     border: 1px solid #DBDBDB;
     padding: 8px;
-
+    background-color: #FFFFFF;
     gap: 16px;
+    flex-direction: column;
+    display: flex;
 }
 
 .setup-guide2 {
@@ -209,6 +211,8 @@
 .setup-guide4 {
     width: 330px;
     height: 60px;
+    display: flex;
+    flex-direction: column;
     gap: 4px;
 }
 
@@ -235,6 +239,7 @@
     height: 4px;
     border-radius: 28px;
     background-color: #E3E3E3;
+    display: flex;
 }
 
 .completed {
@@ -246,5 +251,133 @@
     size: 12px;
     font-weight: 400;
 
+
+}
+
+.loading-span {
+    background-color: #000000;
+    width: 18px;
+    height: 4px;
+    border-radius: 28px 0 0 28px;
+}
+
+.loading-span2 {
+    background-color: #E3E3E3;
+    height: 4px;
+}
+
+.body {
+    background-color: #f3f3f3;
+}
+
+.setup-h {
+    width: 82px;
+    height: 20px;
+    font-weight: 600;
+    size: 14px;
+    line-height: 19.6px;
+    color: #303030;
+}
+
+.setup-p {
+    width: 330px;
+    height: 36px;
+    font-weight: 400;
+    size: 13px;
+    line-height: 18.2px;
+    color: #303030;
+}
+
+.content {
+    width: 375px;
+    height: 309px;
+    gap: 2px;
+
+}
+
+.first {
+    width: 374px;
+    height: 141px;
+    border-radius: 10px;
+    padding: 8px 8px 12px 8px;
+    gap: 96px;
+    background-color: #F3F3F3;
+
+}
+
+.first-detail {
+    width: 358px;
+    height: 121px;
+    gap: 8px;
+    display: flex;
+
+}
+
+.first-icondiv {
+    width: 24px;
+    height: 121px;
+    gap: 8px;
+}
+
+.first-icon {
+    width: 24px;
+    height: 24px;
+
+    padding-top: 2px;
+    padding-left: 2px;
+}
+
+.first-content {
+    width: 326px;
+    height: 121px;
+    padding: 2px 0px 2px 0px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.firstcontent-1 {
+    width: 176px;
+    height: 18px;
+    font-weight: 600;
+    size: 13px;
+    line-height: 18.2px;
+    color: #303030;
+}
+
+.firstcontent-2 {
+    width: 326px;
+    height: 39px;
+    font-weight: 500;
+    size: 14px;
+    line-height: 19.6px;
+    color: #616161;
+
+}
+
+.first-span {
+    font-weight: 500;
+    size: 13px;
+    line-height: 18.2px;
+    color: #005BD3;
+}
+
+.firstcontent-btn {
+    width: 127px;
+    height: 28px;
+    border-radius: 6px;
+    border: 1.5px 1.5px 0px 1.5px;
+    padding: 6px 12px 6px 12px;
+    gap: 8px;
+    color: #FFFFFF;
+    background-color: #404040;
+}
+
+.firstcontent-p {
+    width: 56px;
+    height: 28px;
+    border-radius: 6px;
+    white-space: nowrap;
+    gap: 8px;
 
 }
