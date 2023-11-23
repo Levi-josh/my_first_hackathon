@@ -318,6 +318,7 @@
     border-radius: 10px;
     padding: 8px 8px 12px 8px;
     gap: 96px;
+    display: none;
 
 
 }
@@ -328,7 +329,7 @@
     border-radius: 10px;
     padding: 8px 8px 12px 8px;
     gap: 96px;
-
+    display: none;
 
 }
 
@@ -338,7 +339,7 @@
     border-radius: 10px;
     padding: 8px 8px 12px 8px;
     gap: 96px;
-
+    display: none;
 
 }
 
@@ -348,7 +349,7 @@
     border-radius: 10px;
     padding: 8px 8px 12px 8px;
     gap: 96px;
-
+    display: none;
 
 }
 
@@ -410,7 +411,7 @@
     height: 24px;
     gap: 8px;
     display: flex;
-    display: none;
+
 
 
 }
@@ -440,6 +441,49 @@
     display: flex;
 
 
+}
+
+.first2 {
+    width: 374px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 8px;
+    gap: 120px;
+    display: none;
+}
+
+.second2 {
+    width: 374px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 8px;
+
+
+}
+
+.third2 {
+    width: 374px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 8px;
+
+
+}
+
+.fourth2 {
+    width: 374px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 8px;
+    gap: 120px;
+}
+
+.fifth2 {
+    width: 374px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 8px;
+    gap: 120px;
 }
 
 .first-icondiv {
