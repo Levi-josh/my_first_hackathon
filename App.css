@@ -394,7 +394,7 @@
 
 .fifth-detail {
     width: 358px;
-    height: 121px;
+    height: 157px;
     gap: 8px;
     display: flex;
 
@@ -520,6 +520,7 @@
     size: 13px;
     line-height: 18.2px;
     color: #303030;
+    white-space: nowrap;
 }
 
 .secondcontent-1 {
@@ -529,6 +530,7 @@
     size: 13px;
     line-height: 18.2px;
     color: #303030;
+    white-space: nowrap;
 }
 
 .thirdcontent-1 {
@@ -538,6 +540,7 @@
     size: 13px;
     line-height: 18.2px;
     color: #303030;
+    white-space: nowrap;
 }
 
 .fourthcontent-1 {
@@ -547,6 +550,7 @@
     size: 13px;
     line-height: 18.2px;
     color: #303030;
+    white-space: nowrap;
 }
 
 .fifthcontent-1 {
@@ -556,6 +560,7 @@
     size: 13px;
     line-height: 18.2px;
     color: #303030;
+    white-space: nowrap;
 }
 
 .firstcontent-2 {
@@ -587,6 +592,58 @@
 
 }
 
+.secondcontent-btn {
+    width: 97px;
+    height: 28px;
+    border-radius: 6px;
+    border: 1.5px 1.5px 0px 1.5px;
+    padding: 6px 12px 6px 12px;
+    gap: 8px;
+    color: #FFFFFF;
+    background-color: #404040;
+    white-space: nowrap;
+
+}
+
+.thirdcontent-btn {
+    width: 94px;
+    height: 28px;
+    border-radius: 6px;
+    border: 1.5px 1.5px 0px 1.5px;
+    padding: 6px 12px 6px 12px;
+    gap: 8px;
+    color: #FFFFFF;
+    background-color: #404040;
+    white-space: nowrap;
+
+}
+
+.fourthcontent-btn {
+    width: 91px;
+    height: 28px;
+    border-radius: 6px;
+    border: 1.5px 1.5px 0px 1.5px;
+    padding: 6px 12px 6px 12px;
+    gap: 8px;
+    color: #FFFFFF;
+    background-color: #404040;
+    white-space: nowrap;
+
+}
+
+.fifthcontent-btn {
+    width: 119px;
+    height: 28px;
+    border-radius: 6px;
+    border: 1.5px 1.5px 0px 1.5px;
+    padding: 6px 12px 6px 12px;
+    gap: 8px;
+    color: #FFFFFF;
+    background-color: #404040;
+    white-space: nowrap;
+
+}
+
 .firstcontent-p {
     width: 56px;
     height: 28px;
@@ -595,6 +652,8 @@
     gap: 8px;
 
 }
+
+.secondcontent-p {}
 
 .firstcontent-p2 {
     font-weight: 500;
