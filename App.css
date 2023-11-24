@@ -220,12 +220,13 @@
 }
 
 .setup-guide5 {
-    width: 168px;
+    width: 198px;
     height: 16px;
     gap: 8px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+
+
 
 }
 
@@ -238,7 +239,7 @@
 }
 
 .loading {
-    width: 72px;
+    width: 82px;
     height: 4px;
     border-radius: 28px;
     background-color: #E3E3E3;
@@ -257,17 +258,14 @@
 
 }
 
-.loading-span {
+#loading-span {
     background-color: #000000;
-    width: 18px;
+    width: 0px;
     height: 4px;
     border-radius: 28px 0 0 28px;
 }
 
-.loading-span2 {
-    background-color: #E3E3E3;
-    height: 4px;
-}
+
 
 .body {
     background-color: #f3f3f3;
@@ -696,7 +694,35 @@
 
 .second-div2 {}
 
-.add-product {
+#add-product1 {
+    width: 326px;
+    height: 22px;
+    padding: 2px 0px 2px 0px;
+    gap: 16px;
+}
+
+#add-product2 {
+    width: 326px;
+    height: 22px;
+    padding: 2px 0px 2px 0px;
+    gap: 16px;
+}
+
+#add-product3 {
+    width: 326px;
+    height: 22px;
+    padding: 2px 0px 2px 0px;
+    gap: 16px;
+}
+
+#add-product4 {
+    width: 326px;
+    height: 22px;
+    padding: 2px 0px 2px 0px;
+    gap: 16px;
+}
+
+#add-product5 {
     width: 326px;
     height: 22px;
     padding: 2px 0px 2px 0px;
@@ -714,4 +740,44 @@
 
 .firstcontent-p1 {
     white-space: nowrap;
+}
+
+#second1-icon2 {
+
+    width: 24px;
+    height: 24px;
+    padding-top: 2px;
+    padding-left: 2px;
+}
+
+#second2-icon2 {
+
+    width: 24px;
+    height: 24px;
+    padding-top: 2px;
+    padding-left: 2px;
+}
+
+#second3-icon2 {
+
+    width: 24px;
+    height: 24px;
+    padding-top: 2px;
+    padding-left: 2px;
+}
+
+#second4-icon2 {
+
+    width: 24px;
+    height: 24px;
+    padding-top: 2px;
+    padding-left: 2px;
+}
+
+#second5-icon2 {
+
+    width: 24px;
+    height: 24px;
+    padding-top: 2px;
+    padding-left: 2px;
 }
