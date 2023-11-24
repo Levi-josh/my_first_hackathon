@@ -301,7 +301,7 @@
 
 }
 
-.first {
+#first {
     width: 374px;
     height: 141px;
     border-radius: 10px;
@@ -312,43 +312,47 @@
 }
 
 
-.second {
+#second {
     width: 374px;
     height: 141px;
     border-radius: 10px;
     padding: 8px 8px 12px 8px;
     gap: 96px;
+    background-color: #F3F3F3;
     display: none;
 
 
 }
 
-.third {
+#third {
     width: 374px;
-    height: 141px;
+    height: 159px;
     border-radius: 10px;
     padding: 8px 8px 12px 8px;
     gap: 96px;
+    background-color: #F3F3F3;
     display: none;
 
 }
 
-.fourth {
+#fourth {
     width: 374px;
-    height: 141px;
+    height: 159px;
     border-radius: 10px;
     padding: 8px 8px 12px 8px;
     gap: 96px;
+    background-color: #F3F3F3;
     display: none;
 
 }
 
-.fifth {
+#fifth {
     width: 374px;
-    height: 141px;
+    height: 177px;
     border-radius: 10px;
     padding: 8px 8px 12px 8px;
     gap: 96px;
+    background-color: #F3F3F3;
     display: none;
 
 }
@@ -366,25 +370,25 @@
     height: 121px;
     gap: 8px;
     display: flex;
-    display: none;
+
 
 }
 
-.third-detail {
+#third-detail {
     width: 358px;
-    height: 121px;
+    height: 139px;
     gap: 8px;
     display: flex;
-    display: none;
+
 
 }
 
 .fourth-detail {
     width: 358px;
-    height: 121px;
+    height: 139px;
     gap: 8px;
     display: flex;
-    display: none;
+
 
 }
 
@@ -393,92 +397,92 @@
     height: 121px;
     gap: 8px;
     display: flex;
+
+
+}
+
+#second-detail2 {
+    width: 358px;
+    height: 24px;
+    gap: 8px;
+    display: flex;
+
+
+}
+
+#first-detail2 {
+    width: 358px;
+    height: 24px;
+    gap: 8px;
+    display: flex;
+
+
+
+}
+
+#third-detail2 {
+    width: 358px;
+    height: 24px;
+    gap: 8px;
+    display: flex;
+
+
+}
+
+#fourth-detail2 {
+    width: 358px;
+    height: 24px;
+    gap: 8px;
+    display: flex;
+
+
+}
+
+#fifth-detail2 {
+    width: 358px;
+    height: 24px;
+    gap: 8px;
+    display: flex;
+
+
+}
+
+#first2 {
+    width: 374px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 8px;
+
     display: none;
-
 }
 
-.second-detail2 {
-    width: 358px;
-    height: 24px;
-    gap: 8px;
-    display: flex;
-
-
-}
-
-.first-detail2 {
-    width: 358px;
-    height: 24px;
-    gap: 8px;
-    display: flex;
-
+#second2 {
+    width: 374px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 8px;
 
 
 }
 
-.third-detail2 {
-    width: 358px;
-    height: 24px;
-    gap: 8px;
-    display: flex;
+#third2 {
+    width: 374px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 8px;
 
 
 }
 
-.fourth-detail2 {
-    width: 358px;
-    height: 24px;
-    gap: 8px;
-    display: flex;
-
-
-}
-
-.fifth-detail2 {
-    width: 358px;
-    height: 24px;
-    gap: 8px;
-    display: flex;
-
-
-}
-
-.first2 {
+#fourth2 {
     width: 374px;
     height: 40px;
     border-radius: 10px;
     padding: 8px;
     gap: 120px;
-    display: none;
 }
 
-.second2 {
-    width: 374px;
-    height: 40px;
-    border-radius: 10px;
-    padding: 8px;
-
-
-}
-
-.third2 {
-    width: 374px;
-    height: 40px;
-    border-radius: 10px;
-    padding: 8px;
-
-
-}
-
-.fourth2 {
-    width: 374px;
-    height: 40px;
-    border-radius: 10px;
-    padding: 8px;
-    gap: 120px;
-}
-
-.fifth2 {
+#fifth2 {
     width: 374px;
     height: 40px;
     border-radius: 10px;
@@ -511,6 +515,42 @@
 
 .firstcontent-1 {
     width: 176px;
+    height: 18px;
+    font-weight: 600;
+    size: 13px;
+    line-height: 18.2px;
+    color: #303030;
+}
+
+.secondcontent-1 {
+    width: 139px;
+    height: 18px;
+    font-weight: 600;
+    size: 13px;
+    line-height: 18.2px;
+    color: #303030;
+}
+
+.thirdcontent-1 {
+    width: 137px;
+    height: 18px;
+    font-weight: 600;
+    size: 13px;
+    line-height: 18.2px;
+    color: #303030;
+}
+
+.fourthcontent-1 {
+    width: 104px;
+    height: 18px;
+    font-weight: 600;
+    size: 13px;
+    line-height: 18.2px;
+    color: #303030;
+}
+
+.fifthcontent-1 {
+    width: 166px;
     height: 18px;
     font-weight: 600;
     size: 13px;
@@ -592,6 +632,7 @@
     gap: 8px;
     white-space: nowrap;
     border: none;
+    background-color: #F3F3F3;
 }
 
 .second-div2 {}
@@ -610,4 +651,8 @@
     width: 174px;
     height: 18px;
     color: #303030;
+}
+
+.firstcontent-p1 {
+    white-space: nowrap;
 }
