@@ -33,6 +33,10 @@ const changeicon3 = document.getElementById("third-icon")
 const changeicon4 = document.getElementById("fourth-icon")
 const changeicon5 = document.getElementById("fifth-icon")
 const secondoldicon2 = document.getElementById("secondoldicon2")
+const firstoldicon2 = document.getElementById("firstoldicon2")
+const thirdoldicon2 = document.getElementById("thirdoldicon2")
+const fourtholdicon2 = document.getElementById("fourtholdicon2")
+const fiftholdicon2 = document.getElementById("fiftholdicon2")
 
 
 
@@ -55,10 +59,16 @@ const thirdloading = new isloading()
 const fourthloading = new isloading()
 const fifthloading = new isloading()*/
 
-
+let mycount = 5;
 setupArrow.addEventListener("click", () => {
-    const showcontent = window.getComputedStyle(content)
 
+    mycount += 10;
+    console.log(mycount)
+})
+console.log(mycount)
+
+/* const showcontent = window.getComputedStyle(content)
+ 
     if (showcontent.display === "flex") {
         content.style.display = "none";
         setupGuide.style.height = "124px";
@@ -66,9 +76,7 @@ setupArrow.addEventListener("click", () => {
     else {
         content.style.display = "flex";
         setupGuide.style.height = "449px";
-    }
-
-})
+    }*/
 
 /*function showaccordion() {
     const showcontent = window.getComputedStyle(content)
@@ -112,13 +120,16 @@ addproductBtn.addEventListener("click", () => {
 
 })
 secondiconbtn.addEventListener("click", () => {
+
     const showaddproduct = window.getComputedStyle(showproductcontent)
+
+
     if (showaddproduct.display === "none") {
 
         customizecontent2.style.display = "block";
         customizecontent.style.display = "none";
         showproductcontent.style.display = "block";
-        //secondiconbtn.replaceChild(newicon22, secondoldicon2)
+
         showproductdiv.style.display = "none";
         customdomain.style.display = "none";
         customdomain2.style.display = "block";
@@ -145,6 +156,7 @@ secondiconbtn.addEventListener("click", () => {
 />`;
 
     changeicon2.replaceChild(newicon2, oldicon2);
+
     //hhhhhhhhhhhhh
 
 
@@ -163,13 +175,96 @@ secondiconbtn.addEventListener("click", () => {
         d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
         fill="#fff"
     ></path>`;
+
+    const newicon222 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon222.setAttribute('id', 'newicon222')
+    newicon222.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon222.setAttribute('width', '20')
+    newicon222.setAttribute('height', '20')
+    newicon222.setAttribute('viewBox', '0 0 24 24')
+    newicon222.setAttribute('fill', 'none')
+
+
+    newicon222.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
+    <path
+        d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+        fill="#fff"
+    ></path>`;
+
     setTimeout(() => {
         changeicon2.replaceChild(newicon22, newicon2);
-
+        secondiconbtn.replaceChild(newicon222, secondoldicon2);
 
 
     }, 500)
 
+
+
+
+
+
+})
+changeicon2.addEventListener("click", () => {
+    const newicon2 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon2.setAttribute('id', 'newicon2')
+    newicon2.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon2.setAttribute('width', '16')
+    newicon2.setAttribute('height', '16')
+    newicon2.setAttribute('viewBox', '0 0 28 28')
+    newicon2.setAttribute('fill', 'none')
+
+    newicon2.innerHTML = `<path
+    d="M26 14C26 16.3734 25.2962 18.6935 23.9776 20.6668C22.6591 22.6402 20.7849 24.1783 18.5922 25.0866C16.3995 25.9948 13.9867 26.2324 11.6589 25.7694C9.33114 25.3064 7.19295 24.1635 5.51472 22.4853C3.83649 20.8071 2.6936 18.6689 2.23058 16.3411C1.76755 14.0133 2.00519 11.6005 2.91345 9.4078C3.8217 7.21509 5.35977 5.34094 7.33316 4.02236C9.30655 2.70379 11.6266 2 14 2"
+    stroke="#000"
+    stroke-width="2.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+/>`;
+
+    changeicon2.replaceChild(newicon2, oldicon2);
+
+    //hhhhhhhhhhhhh
+
+
+    const newicon22 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon22.setAttribute('id', 'newicon22')
+    newicon22.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon22.setAttribute('width', '20')
+    newicon22.setAttribute('height', '20')
+    newicon22.setAttribute('viewBox', '0 0 24 24')
+    newicon22.setAttribute('fill', 'none')
+
+
+    newicon22.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
+    <path
+        d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+        fill="#fff"
+    ></path>`;
+    const newicon222 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon222.setAttribute('id', 'newicon222')
+    newicon222.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon222.setAttribute('width', '20')
+    newicon222.setAttribute('height', '20')
+    newicon222.setAttribute('viewBox', '0 0 24 24')
+    newicon222.setAttribute('fill', 'none')
+
+
+    newicon222.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
+    <path
+        d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+        fill="#fff"
+    ></path>`;
+
+    setTimeout(() => {
+        changeicon2.replaceChild(newicon22, newicon2);
+        secondiconbtn.replaceChild(newicon222, secondoldicon2);
+
+
+    }, 500)
 
 })
 
@@ -224,27 +319,101 @@ firsticonbtn.addEventListener("click", () => {
 
     changeicon1.replaceChild(newicon1, oldicon1)
     //nnnnnnnnnnnnnnn
-    setTimeout(() => {
-        const newicon11 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
 
-        newicon11.setAttribute('id', 'newicon11')
-        newicon11.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
-        newicon11.setAttribute('width', '20')
-        newicon11.setAttribute('height', '20')
-        newicon11.setAttribute('viewBox', '0 0 24 24')
-        newicon11.setAttribute('fill', 'none')
+    const newicon11 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon11.setAttribute('id', 'newicon11')
+    newicon11.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon11.setAttribute('width', '20')
+    newicon11.setAttribute('height', '20')
+    newicon11.setAttribute('viewBox', '0 0 24 24')
+    newicon11.setAttribute('fill', 'none')
 
 
-        newicon11.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
+    newicon11.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
     <path
         d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
         fill="#fff"
     ></path>`
-        changeicon1.replaceChild(newicon11, newicon1)
 
+    const newicon111 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon111.setAttribute('id', 'newicon111')
+    newicon111.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon111.setAttribute('width', '20')
+    newicon111.setAttribute('height', '20')
+    newicon111.setAttribute('viewBox', '0 0 24 24')
+    newicon111.setAttribute('fill', 'none')
+
+
+    newicon111.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
+    <path
+        d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+        fill="#fff"
+    ></path>`
+    setTimeout(() => {
+        changeicon1.replaceChild(newicon11, newicon1)
+        firsticonbtn.replaceChild(newicon111, firstoldicon2);
     }, 500)
 
 
+})
+changeicon1.addEventListener("click", () => {
+    const newicon1 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon1.setAttribute('id', 'newicon1')
+    newicon1.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon1.setAttribute('width', '16')
+    newicon1.setAttribute('height', '16')
+    newicon1.setAttribute('viewBox', '0 0 28 28')
+    newicon1.setAttribute('fill', 'none')
+
+    newicon1.innerHTML = `<path
+    d="M26 14C26 16.3734 25.2962 18.6935 23.9776 20.6668C22.6591 22.6402 20.7849 24.1783 18.5922 25.0866C16.3995 25.9948 13.9867 26.2324 11.6589 25.7694C9.33114 25.3064 7.19295 24.1635 5.51472 22.4853C3.83649 20.8071 2.6936 18.6689 2.23058 16.3411C1.76755 14.0133 2.00519 11.6005 2.91345 9.4078C3.8217 7.21509 5.35977 5.34094 7.33316 4.02236C9.30655 2.70379 11.6266 2 14 2"
+    stroke="#000"
+    stroke-width="2.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+/>`;
+
+    changeicon1.replaceChild(newicon1, oldicon1)
+    //nnnnnnnnnnnnnnn
+
+    const newicon11 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon11.setAttribute('id', 'newicon11')
+    newicon11.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon11.setAttribute('width', '20')
+    newicon11.setAttribute('height', '20')
+    newicon11.setAttribute('viewBox', '0 0 24 24')
+    newicon11.setAttribute('fill', 'none')
+
+
+    newicon11.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
+    <path
+        d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+        fill="#fff"
+    ></path>`
+    const newicon111 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon111.setAttribute('id', 'newicon111')
+    newicon111.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon111.setAttribute('width', '20')
+    newicon111.setAttribute('height', '20')
+    newicon111.setAttribute('viewBox', '0 0 24 24')
+    newicon111.setAttribute('fill', 'none')
+
+
+    newicon111.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
+    <path
+        d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+        fill="#fff"
+    ></path>`
+    setTimeout(() => {
+        changeicon1.replaceChild(newicon11, newicon1)
+        firsticonbtn.replaceChild(newicon111, firstoldicon2);
+
+    }, 500)
 })
 
 custombtn.addEventListener("click", () => {
@@ -277,17 +446,17 @@ thirdiconbtn.addEventListener("click", () => {
         setupGuide.style.height = "467px";
         payment.style.display = "none";
         payment2.style.display = "block";
+    }
+    const newicon3 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
 
-        const newicon3 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+    newicon3.setAttribute('id', 'newicon3')
+    newicon3.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon3.setAttribute('width', '16')
+    newicon3.setAttribute('height', '16')
+    newicon3.setAttribute('viewBox', '0 0 28 28')
+    newicon3.setAttribute('fill', 'none')
 
-        newicon3.setAttribute('id', 'newicon3')
-        newicon3.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
-        newicon3.setAttribute('width', '16')
-        newicon3.setAttribute('height', '16')
-        newicon3.setAttribute('viewBox', '0 0 28 28')
-        newicon3.setAttribute('fill', 'none')
-
-        newicon3.innerHTML = `<path
+    newicon3.innerHTML = `<path
     d="M26 14C26 16.3734 25.2962 18.6935 23.9776 20.6668C22.6591 22.6402 20.7849 24.1783 18.5922 25.0866C16.3995 25.9948 13.9867 26.2324 11.6589 25.7694C9.33114 25.3064 7.19295 24.1635 5.51472 22.4853C3.83649 20.8071 2.6936 18.6689 2.23058 16.3411C1.76755 14.0133 2.00519 11.6005 2.91345 9.4078C3.8217 7.21509 5.35977 5.34094 7.33316 4.02236C9.30655 2.70379 11.6266 2 14 2"
     stroke="#000"
     stroke-width="2.5"
@@ -295,28 +464,104 @@ thirdiconbtn.addEventListener("click", () => {
     stroke-linejoin="round"
 />`;
 
-        changeicon3.replaceChild(newicon3, oldicon3)
-
-        setTimeout(() => {
-            const newicon33 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
-
-            newicon33.setAttribute('id', 'newicon33')
-            newicon33.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
-            newicon33.setAttribute('width', '20')
-            newicon33.setAttribute('height', '20')
-            newicon33.setAttribute('viewBox', '0 0 24 24')
-            newicon33.setAttribute('fill', 'none')
+    changeicon3.replaceChild(newicon3, oldicon3)
 
 
-            newicon33.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
+    const newicon33 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon33.setAttribute('id', 'newicon33')
+    newicon33.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon33.setAttribute('width', '20')
+    newicon33.setAttribute('height', '20')
+    newicon33.setAttribute('viewBox', '0 0 24 24')
+    newicon33.setAttribute('fill', 'none')
+
+
+    newicon33.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
     <path
         d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
         fill="#fff"
     ></path>`
-            changeicon3.replaceChild(newicon33, newicon3)
 
-        }, 500)
-    }
+    const newicon333 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon333.setAttribute('id', 'newicon333')
+    newicon333.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon333.setAttribute('width', '20')
+    newicon333.setAttribute('height', '20')
+    newicon333.setAttribute('viewBox', '0 0 24 24')
+    newicon333.setAttribute('fill', 'none')
+
+
+    newicon333.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
+    <path
+        d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+        fill="#fff"
+    ></path>`
+    setTimeout(() => {
+        changeicon3.replaceChild(newicon33, newicon3)
+        thirdiconbtn.replaceChild(newicon333, thirdoldicon2);
+
+    }, 500)
+
+})
+changeicon3.addEventListener("click", () => {
+
+    const newicon3 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon3.setAttribute('id', 'newicon3')
+    newicon3.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon3.setAttribute('width', '16')
+    newicon3.setAttribute('height', '16')
+    newicon3.setAttribute('viewBox', '0 0 28 28')
+    newicon3.setAttribute('fill', 'none')
+
+    newicon3.innerHTML = `<path
+    d="M26 14C26 16.3734 25.2962 18.6935 23.9776 20.6668C22.6591 22.6402 20.7849 24.1783 18.5922 25.0866C16.3995 25.9948 13.9867 26.2324 11.6589 25.7694C9.33114 25.3064 7.19295 24.1635 5.51472 22.4853C3.83649 20.8071 2.6936 18.6689 2.23058 16.3411C1.76755 14.0133 2.00519 11.6005 2.91345 9.4078C3.8217 7.21509 5.35977 5.34094 7.33316 4.02236C9.30655 2.70379 11.6266 2 14 2"
+    stroke="#000"
+    stroke-width="2.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+/>`;
+
+    changeicon3.replaceChild(newicon3, oldicon3)
+
+
+    const newicon33 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon33.setAttribute('id', 'newicon33')
+    newicon33.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon33.setAttribute('width', '20')
+    newicon33.setAttribute('height', '20')
+    newicon33.setAttribute('viewBox', '0 0 24 24')
+    newicon33.setAttribute('fill', 'none')
+
+
+    newicon33.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
+    <path
+        d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+        fill="#fff"
+    ></path>`
+    const newicon333 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon333.setAttribute('id', 'newicon333')
+    newicon333.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon333.setAttribute('width', '20')
+    newicon333.setAttribute('height', '20')
+    newicon333.setAttribute('viewBox', '0 0 24 24')
+    newicon333.setAttribute('fill', 'none')
+
+
+    newicon333.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
+    <path
+        d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+        fill="#fff"
+    ></path>`
+    setTimeout(() => {
+        changeicon3.replaceChild(newicon33, newicon3)
+        thirdiconbtn.replaceChild(newicon333, thirdoldicon2);
+
+    }, 500)
 })
 namestorebtn.addEventListener("click", () => {
     const shownamestore = window.getComputedStyle(namestore)
@@ -349,17 +594,18 @@ fourthiconbtn.addEventListener("click", () => {
         payment.style.display = "none";
         payment2.style.display = "block";
         setupGuide.style.height = "467px"
+    }
 
-        const newicon4 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+    const newicon4 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
 
-        newicon4.setAttribute('id', 'newicon4')
-        newicon4.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
-        newicon4.setAttribute('width', '16')
-        newicon4.setAttribute('height', '16')
-        newicon4.setAttribute('viewBox', '0 0 28 28')
-        newicon4.setAttribute('fill', 'none')
+    newicon4.setAttribute('id', 'newicon4')
+    newicon4.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon4.setAttribute('width', '16')
+    newicon4.setAttribute('height', '16')
+    newicon4.setAttribute('viewBox', '0 0 28 28')
+    newicon4.setAttribute('fill', 'none')
 
-        newicon4.innerHTML = `<path
+    newicon4.innerHTML = `<path
     d="M26 14C26 16.3734 25.2962 18.6935 23.9776 20.6668C22.6591 22.6402 20.7849 24.1783 18.5922 25.0866C16.3995 25.9948 13.9867 26.2324 11.6589 25.7694C9.33114 25.3064 7.19295 24.1635 5.51472 22.4853C3.83649 20.8071 2.6936 18.6689 2.23058 16.3411C1.76755 14.0133 2.00519 11.6005 2.91345 9.4078C3.8217 7.21509 5.35977 5.34094 7.33316 4.02236C9.30655 2.70379 11.6266 2 14 2"
     stroke="#000"
     stroke-width="2.5"
@@ -367,30 +613,107 @@ fourthiconbtn.addEventListener("click", () => {
     stroke-linejoin="round"
 />`;
 
-        changeicon4.replaceChild(newicon4, oldicon4)
+    changeicon4.replaceChild(newicon4, oldicon4)
 
-        setTimeout(() => {
-            const newicon44 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+    const newicon44 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
 
-            newicon44.setAttribute('id', 'newicon44')
-            newicon44.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
-            newicon44.setAttribute('width', '20')
-            newicon44.setAttribute('height', '20')
-            newicon44.setAttribute('viewBox', '0 0 24 24')
-            newicon44.setAttribute('fill', 'none')
+    newicon44.setAttribute('id', 'newicon44')
+    newicon44.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon44.setAttribute('width', '20')
+    newicon44.setAttribute('height', '20')
+    newicon44.setAttribute('viewBox', '0 0 24 24')
+    newicon44.setAttribute('fill', 'none')
 
 
-            newicon44.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
+    newicon44.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
     <path
         d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
         fill="#fff"
     ></path>`
-            changeicon4.replaceChild(newicon44, newicon4)
 
-        }, 500)
+    const newicon444 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
 
-    }
+    newicon444.setAttribute('id', 'newicon444')
+    newicon444.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon444.setAttribute('width', '20')
+    newicon444.setAttribute('height', '20')
+    newicon444.setAttribute('viewBox', '0 0 24 24')
+    newicon444.setAttribute('fill', 'none')
+
+
+    newicon444.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
+    <path
+        d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+        fill="#fff"
+    ></path>`
+
+    setTimeout(() => {
+        changeicon4.replaceChild(newicon44, newicon4)
+        fourthiconbtn.replaceChild(newicon444, fourtholdicon2);
+
+    }, 500)
+
+
 })
+changeicon4.addEventListener("click", () => {
+
+    const newicon4 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon4.setAttribute('id', 'newicon4')
+    newicon4.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon4.setAttribute('width', '16')
+    newicon4.setAttribute('height', '16')
+    newicon4.setAttribute('viewBox', '0 0 28 28')
+    newicon4.setAttribute('fill', 'none')
+
+    newicon4.innerHTML = `<path
+    d="M26 14C26 16.3734 25.2962 18.6935 23.9776 20.6668C22.6591 22.6402 20.7849 24.1783 18.5922 25.0866C16.3995 25.9948 13.9867 26.2324 11.6589 25.7694C9.33114 25.3064 7.19295 24.1635 5.51472 22.4853C3.83649 20.8071 2.6936 18.6689 2.23058 16.3411C1.76755 14.0133 2.00519 11.6005 2.91345 9.4078C3.8217 7.21509 5.35977 5.34094 7.33316 4.02236C9.30655 2.70379 11.6266 2 14 2"
+    stroke="#000"
+    stroke-width="2.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+/>`;
+
+    changeicon4.replaceChild(newicon4, oldicon4)
+
+    const newicon44 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon44.setAttribute('id', 'newicon44')
+    newicon44.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon44.setAttribute('width', '20')
+    newicon44.setAttribute('height', '20')
+    newicon44.setAttribute('viewBox', '0 0 24 24')
+    newicon44.setAttribute('fill', 'none')
+
+
+    newicon44.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
+    <path
+        d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+        fill="#fff"
+    ></path>`
+    const newicon444 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon444.setAttribute('id', 'newicon444')
+    newicon444.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon444.setAttribute('width', '20')
+    newicon444.setAttribute('height', '20')
+    newicon444.setAttribute('viewBox', '0 0 24 24')
+    newicon444.setAttribute('fill', 'none')
+
+
+    newicon444.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
+    <path
+        d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+        fill="#fff"
+    ></path>`
+
+    setTimeout(() => {
+        changeicon4.replaceChild(newicon44, newicon4)
+        fourthiconbtn.replaceChild(newicon444, fourtholdicon2);
+
+    }, 500)
+})
+
 paymentbtn.addEventListener("click", () => {
     const showpayment = window.getComputedStyle(payment)
     if (showpayment.display === "none") {
@@ -408,7 +731,9 @@ paymentbtn.addEventListener("click", () => {
 
     }
 })
+
 fifthiconbtn.addEventListener("click", () => {
+
     const showpayment = window.getComputedStyle(payment)
     if (showpayment.display === "none") {
         payment.style.display = "block";
@@ -422,17 +747,17 @@ fifthiconbtn.addEventListener("click", () => {
         namestore.style.display = "none";
         namestore2.style.display = "block";
         setupGuide.style.height = "485px"
+    }
+    const newicon5 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
 
-        const newicon5 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+    newicon5.setAttribute('id', 'newicon5')
+    newicon5.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon5.setAttribute('width', '16')
+    newicon5.setAttribute('height', '16')
+    newicon5.setAttribute('viewBox', '0 0 28 28')
+    newicon5.setAttribute('fill', 'none')
 
-        newicon5.setAttribute('id', 'newicon5')
-        newicon5.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
-        newicon5.setAttribute('width', '16')
-        newicon5.setAttribute('height', '16')
-        newicon5.setAttribute('viewBox', '0 0 28 28')
-        newicon5.setAttribute('fill', 'none')
-
-        newicon5.innerHTML = `<path
+    newicon5.innerHTML = `<path
     d="M26 14C26 16.3734 25.2962 18.6935 23.9776 20.6668C22.6591 22.6402 20.7849 24.1783 18.5922 25.0866C16.3995 25.9948 13.9867 26.2324 11.6589 25.7694C9.33114 25.3064 7.19295 24.1635 5.51472 22.4853C3.83649 20.8071 2.6936 18.6689 2.23058 16.3411C1.76755 14.0133 2.00519 11.6005 2.91345 9.4078C3.8217 7.21509 5.35977 5.34094 7.33316 4.02236C9.30655 2.70379 11.6266 2 14 2"
     stroke="#000"
     stroke-width="2.5"
@@ -440,29 +765,107 @@ fifthiconbtn.addEventListener("click", () => {
     stroke-linejoin="round"
 />`;
 
-        changeicon5.replaceChild(newicon5, oldicon5)
+    changeicon5.replaceChild(newicon5, oldicon5)
 
 
-        setTimeout(() => {
-            const newicon55 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
 
-            newicon55.setAttribute('id', 'newicon55')
-            newicon55.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
-            newicon55.setAttribute('width', '20')
-            newicon55.setAttribute('height', '20')
-            newicon55.setAttribute('viewBox', '0 0 24 24')
-            newicon55.setAttribute('fill', 'none')
+    const newicon55 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon55.setAttribute('id', 'newicon55')
+    newicon55.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon55.setAttribute('width', '20')
+    newicon55.setAttribute('height', '20')
+    newicon55.setAttribute('viewBox', '0 0 24 24')
+    newicon55.setAttribute('fill', 'none')
 
 
-            newicon55.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
+    newicon55.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
     <path
         d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
         fill="#fff"
     ></path>`
-            changeicon5.replaceChild(newicon55, newicon5)
 
-        }, 500)
+    const newicon555 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
 
-    }
-});
+    newicon555.setAttribute('id', 'newicon555')
+    newicon555.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon555.setAttribute('width', '20')
+    newicon555.setAttribute('height', '20')
+    newicon555.setAttribute('viewBox', '0 0 24 24')
+    newicon555.setAttribute('fill', 'none')
+
+
+    newicon555.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
+    <path
+        d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+        fill="#fff"
+    ></path>`
+    setTimeout(() => {
+        changeicon5.replaceChild(newicon55, newicon5)
+        fifthiconbtn.replaceChild(newicon555, fiftholdicon2);
+
+    }, 500)
+
+
+})
+
+changeicon5.addEventListener("click", () => {
+    const newicon5 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon5.setAttribute('id', 'newicon5')
+    newicon5.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon5.setAttribute('width', '16')
+    newicon5.setAttribute('height', '16')
+    newicon5.setAttribute('viewBox', '0 0 28 28')
+    newicon5.setAttribute('fill', 'none')
+
+    newicon5.innerHTML = `<path
+    d="M26 14C26 16.3734 25.2962 18.6935 23.9776 20.6668C22.6591 22.6402 20.7849 24.1783 18.5922 25.0866C16.3995 25.9948 13.9867 26.2324 11.6589 25.7694C9.33114 25.3064 7.19295 24.1635 5.51472 22.4853C3.83649 20.8071 2.6936 18.6689 2.23058 16.3411C1.76755 14.0133 2.00519 11.6005 2.91345 9.4078C3.8217 7.21509 5.35977 5.34094 7.33316 4.02236C9.30655 2.70379 11.6266 2 14 2"
+    stroke="#000"
+    stroke-width="2.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+/>`;
+
+    changeicon5.replaceChild(newicon5, oldicon5)
+
+
+
+    const newicon55 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon55.setAttribute('id', 'newicon55')
+    newicon55.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon55.setAttribute('width', '20')
+    newicon55.setAttribute('height', '20')
+    newicon55.setAttribute('viewBox', '0 0 24 24')
+    newicon55.setAttribute('fill', 'none')
+
+
+    newicon55.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
+    <path
+        d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+        fill="#fff"
+    ></path>`
+    const newicon555 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon555.setAttribute('id', 'newicon555')
+    newicon555.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon555.setAttribute('width', '20')
+    newicon555.setAttribute('height', '20')
+    newicon555.setAttribute('viewBox', '0 0 24 24')
+    newicon555.setAttribute('fill', 'none')
+
+
+    newicon555.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
+    <path
+        d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+        fill="#fff"
+    ></path>`
+    setTimeout(() => {
+        changeicon5.replaceChild(newicon55, newicon5)
+        fifthiconbtn.replaceChild(newicon555, fiftholdicon2);
+
+    }, 500)
+})
+
 
