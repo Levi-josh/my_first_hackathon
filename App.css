@@ -494,13 +494,131 @@
     gap: 8px;
 }
 
-.first-icon {
+#newicon1 {
+    margin-top: 2px;
+    margin-left: 2px;
+    animation: firstanimation1 0.5s ease-in-out 0.03s 1 normal forwards;
+
+}
+
+@keyframes firstanimation1 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#newicon2 {
+    margin-top: 2px;
+    margin-left: 2px;
+    animation: firstanimation2 0.5s ease-in-out 0.03s 1 normal forwards;
+
+}
+
+@keyframes firstanimation2 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#newicon3 {
+    margin-top: 2px;
+    margin-left: 2px;
+    animation: firstanimation3 0.5s ease-in-out 0.03s 1 normal forwards;
+
+}
+
+@keyframes firstanimation3 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#newicon4 {
+    margin-top: 2px;
+    margin-left: 2px;
+    animation: firstanimation4 0.5s ease-in-out 0.03s 1 normal forwards;
+
+}
+
+@keyframes firstanimation4 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#newicon5 {
+    margin-top: 2px;
+    margin-left: 2px;
+    animation: firstanimation5 0.5s ease-in-out 0.03s 1 normal forwards;
+
+}
+
+@keyframes firstanimation5 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#first-icon {
     width: 24px;
     height: 24px;
 
     padding-top: 2px;
     padding-left: 2px;
 }
+
+#second-icon {
+    width: 24px;
+    height: 24px;
+
+    padding-top: 2px;
+    padding-left: 2px;
+}
+
+#third-icon {
+    width: 24px;
+    height: 24px;
+
+    padding-top: 2px;
+    padding-left: 2px;
+}
+
+#fourth-icon {
+    width: 24px;
+    height: 24px;
+
+    padding-top: 2px;
+    padding-left: 2px;
+}
+
+#fifth-icon {
+    width: 24px;
+    height: 24px;
+
+    padding-top: 2px;
+    padding-left: 2px;
+}
+
 
 .first-content {
     width: 326px;
