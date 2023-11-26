@@ -40,32 +40,37 @@ const fiftholdicon2 = document.getElementById("fiftholdicon2")
 
 
 
-/*class isloading {
-    constructor() {
+const checkloading = {
+    isloading: 0,
 
-    }
-    calculateWeight(num) {
-        let newweight = 0
-        let c = newweight += num + "px"
-        c = loading.style.width
-        console.log(c)
+
+    calculateWidth: function (num) {
+
+
+        this.isloading = this.isloading + num
+
 
     }
 }
 
-const firstloading = new isloading()
-const secondloading = new isloading()
-const thirdloading = new isloading()
-const fourthloading = new isloading()
-const fifthloading = new isloading()*/
 
-let mycount = 5;
 setupArrow.addEventListener("click", () => {
+    const showcontent = window.getComputedStyle(content)
 
-    mycount += 10;
-    console.log(mycount)
+    if (showcontent.display === "flex") {
+        content.style.display = "none";
+        setupGuide.style.height = "124px";
+    }
+    else {
+        content.style.display = "flex";
+        setupGuide.style.height = "449px";
+    }
+
 })
-console.log(mycount)
+
+
+
+
 
 /* const showcontent = window.getComputedStyle(content)
  
@@ -138,6 +143,8 @@ secondiconbtn.addEventListener("click", () => {
         payment.style.display = "none";
         payment2.style.display = "block";
     }
+    checkloading.calculateWidth(18)
+    loading.style.width = checkloading.isloading + "px"
     const newicon2 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
 
     newicon2.setAttribute('id', 'newicon2')
@@ -205,6 +212,7 @@ secondiconbtn.addEventListener("click", () => {
 
 
 })
+
 changeicon2.addEventListener("click", () => {
     const newicon2 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
 
@@ -355,9 +363,11 @@ firsticonbtn.addEventListener("click", () => {
         changeicon1.replaceChild(newicon11, newicon1)
         firsticonbtn.replaceChild(newicon111, firstoldicon2);
     }, 500)
-
+    checkloading.calculateWidth(18)
+    loading.style.width = checkloading.isloading + "px"
 
 })
+
 changeicon1.addEventListener("click", () => {
     const newicon1 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
 
@@ -503,7 +513,8 @@ thirdiconbtn.addEventListener("click", () => {
         thirdiconbtn.replaceChild(newicon333, thirdoldicon2);
 
     }, 500)
-
+    checkloading.calculateWidth(18)
+    loading.style.width = checkloading.isloading + "px"
 })
 changeicon3.addEventListener("click", () => {
 
@@ -653,7 +664,8 @@ fourthiconbtn.addEventListener("click", () => {
 
     }, 500)
 
-
+    checkloading.calculateWidth(18)
+    loading.style.width = checkloading.isloading + "px"
 })
 changeicon4.addEventListener("click", () => {
 
@@ -805,7 +817,8 @@ fifthiconbtn.addEventListener("click", () => {
         fifthiconbtn.replaceChild(newicon555, fiftholdicon2);
 
     }, 500)
-
+    checkloading.calculateWidth(18)
+    loading.style.width = checkloading.isloading + "px"
 
 })
 
@@ -866,6 +879,7 @@ changeicon5.addEventListener("click", () => {
         fifthiconbtn.replaceChild(newicon555, fiftholdicon2);
 
     }, 500)
+
 })
 
-
+console.log(checkloading.isloading)
