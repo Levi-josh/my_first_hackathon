@@ -269,7 +269,7 @@
 
 
     .body {
-        background-color: #f3f3f3;
+        background-color: #f1f1f1;
     }
 
     .setup-h {
@@ -515,11 +515,30 @@
     #newicon2 {
         margin-top: 2px;
         margin-left: 2px;
+
         animation: firstanimation2 0.5s ease-in-out 0.03s 1 normal forwards;
 
     }
 
     @keyframes firstanimation2 {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    #dnewicon2 {
+        margin-top: 2px;
+        margin-left: 2px;
+
+        animation: secondanimation2 0.5s ease-in-out 0.03s 1 normal forwards;
+
+    }
+
+    @keyframes secondanimation2 {
         0% {
             transform: rotate(0deg);
         }
@@ -588,7 +607,23 @@
         padding-left: 2px;
     }
 
+    #dfirst-icon {
+        width: 24px;
+        height: 24px;
+
+        padding-top: 2px;
+        padding-left: 2px;
+    }
+
     #second-icon {
+        width: 24px;
+        height: 24px;
+
+        padding-top: 2px;
+        padding-left: 2px;
+    }
+
+    #dsecond-icon {
         width: 24px;
         height: 24px;
 
@@ -604,6 +639,14 @@
         padding-left: 2px;
     }
 
+    #dthird-icon {
+        width: 24px;
+        height: 24px;
+
+        padding-top: 2px;
+        padding-left: 2px;
+    }
+
     #fourth-icon {
         width: 24px;
         height: 24px;
@@ -612,7 +655,23 @@
         padding-left: 2px;
     }
 
+    #dfourth-icon {
+        width: 24px;
+        height: 24px;
+
+        padding-top: 2px;
+        padding-left: 2px;
+    }
+
     #fifth-icon {
+        width: 24px;
+        height: 24px;
+
+        padding-top: 2px;
+        padding-left: 2px;
+    }
+
+    #dfifth-icon {
         width: 24px;
         height: 24px;
 
@@ -1038,12 +1097,13 @@
 
     .section {
         width: 800px;
-        height: 178px;
+
         padding-top: 88px;
         gap: 16px;
         margin: auto;
         display: flex;
         flex-direction: column;
+
     }
 
     .select-plan {
@@ -1099,15 +1159,15 @@
         gap: 8px;
     }
 
-    .setup-guide {
+    #d-setup-guide {
         width: 800px;
-        /* height: 106px;*/
+
         border-radius: 18px;
         padding: 8px;
         gap: 16px;
         border: 1px solid #DBDBDB;
         background-color: white;
-        height: 431px;
+
 
     }
 
@@ -1127,7 +1187,7 @@
         flex-direction: column;
     }
 
-    .setup1 {
+    #setup1 {
         width: 28px;
         height: 28px;
         border-radius: 6px;
@@ -1190,35 +1250,64 @@
         background-color: #E3E3E3;
     }
 
-    #first2 {
-        display: none;
-    }
 
-    .second {
-        display: none;
-    }
 
-    .third {
-        display: none;
-    }
-
-    .fourth {
-        display: none;
-    }
-
-    .fifth {
-        display: none;
-    }
-
-    .content {
+    #dsecond {
         width: 784px;
-        height: 309px;
+        height: 141px;
+        border-radius: 10px;
+        padding: 8px 8px 12px 8px;
+        gap: 96px;
+        background-color: #F3F3F3;
+
+        display: none;
+    }
+
+    #dthird {
+        width: 784px;
+        height: 141px;
+        border-radius: 10px;
+        padding: 8px 8px 12px 8px;
+        gap: 96px;
+        background-color: #F3F3F3;
+
+        display: none;
+
+    }
+
+    #dfourth {
+        width: 784px;
+        height: 141px;
+        border-radius: 10px;
+        padding: 8px 8px 12px 8px;
+        gap: 96px;
+        background-color: #F3F3F3;
+
+        display: none;
+
+    }
+
+    #dfifth {
+        width: 784px;
+        height: 159px;
+        border-radius: 10px;
+        padding: 8px 8px 12px 8px;
+        gap: 96px;
+        background-color: #F3F3F3;
+
+        align-items: center;
+        display: none;
+    }
+
+    #dcontent {
+        width: 784px;
+
         gap: 2px;
-        display: flex;
+        display: none;
         flex-direction: column;
     }
 
-    .first {
+    #dfirst {
         width: 784px;
         height: 141px;
         border-radius: 10px;
@@ -1226,6 +1315,7 @@
         gap: 96px;
         background-color: #F3F3F3;
         display: flex;
+
     }
 
     .first-detail {
@@ -1236,7 +1326,44 @@
 
     }
 
+    .second-detail {
+        width: 515.86px;
+        height: 121px;
+        gap: 8px;
+        display: flex;
+
+    }
+
+    .third-detail {
+        width: 515.86px;
+        height: 121px;
+        gap: 8px;
+        display: flex;
+
+    }
+
+    .fourth-detail {
+        width: 515.86px;
+        height: 121px;
+        gap: 8px;
+        display: flex;
+
+    }
+
+    .fifth-detail {
+        width: 515.86px;
+        height: 139px;
+        gap: 8px;
+        display: flex;
+
+    }
+
     .first-pic {
+        width: 156.14px;
+        height: 120px;
+    }
+
+    .second-pic {
         width: 156.14px;
         height: 120px;
     }
@@ -1248,7 +1375,39 @@
 
     }
 
-    .first-icon {
+    #dfirst-icon {
+        width: 24px;
+        height: 24px;
+
+        padding-left: 2px;
+        padding-top: 2px;
+    }
+
+    #dsecond-icon {
+        width: 24px;
+        height: 24px;
+
+        padding-left: 2px;
+        padding-top: 2px;
+    }
+
+    #dthird-icon {
+        width: 24px;
+        height: 24px;
+
+        padding-left: 2px;
+        padding-top: 2px;
+    }
+
+    #dfourth-icon {
+        width: 24px;
+        height: 24px;
+
+        padding-left: 2px;
+        padding-top: 2px;
+    }
+
+    #dfifth-icon {
         width: 24px;
         height: 24px;
 
@@ -1264,9 +1423,57 @@
         flex-direction: column;
         display: flex;
 
+
+    }
+
+    .fifth-content {
+        width: 483.86px;
+        height: 139px;
+        padding: 2px 0px 2px 0px;
+        gap: 16px;
+        flex-direction: column;
+        display: flex;
+
+
     }
 
     .firstcontent-1 {
+        width: 176px;
+        height: 18px;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 18.2px;
+        color: #303030;
+    }
+
+    .secondcontent-1 {
+        width: 176px;
+        height: 18px;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 18.2px;
+        color: #303030;
+    }
+
+    .thirdcontent-1 {
+        width: 176px;
+        height: 18px;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 18.2px;
+        color: #303030;
+    }
+
+    .fourthcontent-1 {
+        width: 176px;
+        height: 18px;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 18.2px;
+        color: #303030;
+    }
+
+    .fifthcontent-1 {
         width: 176px;
         height: 18px;
         font-weight: 600;
@@ -1282,13 +1489,27 @@
         font-size: 14px;
         line-height: 19.6px;
         color: #616161;
+
+
+    }
+
+    .firstcontent-p25 {
+        width: 483.86px;
+        height: 57px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19.6px;
+        color: #616161;
+
+
     }
 
     .first-span {
         font-weight: 500;
-        font-size: 13px;
+        font-size: 15px;
         line-height: 18.2px;
         color: #005BD3;
+
     }
 
     .firstcontent-btn {
@@ -1298,7 +1519,214 @@
         background-color: #404040;
         color: white;
         border-radius: 6px;
+    }
+
+    #dsecond2 {
+        width: 784px;
+        height: 40px;
+        border-radius: 10px;
+        padding: 8px;
+        gap: 120px;
 
 
+    }
+
+    #dfirst2 {
+        width: 784px;
+        height: 40px;
+        border-radius: 10px;
+        padding: 8px;
+        gap: 120px;
+        display: none;
+
+
+    }
+
+    #second-detail2 {
+        width: 768px;
+        height: 24px;
+        gap: 8px;
+        display: flex;
+    }
+
+    #first-detail2 {
+        width: 768px;
+        height: 24px;
+        gap: 8px;
+        display: flex;
+    }
+
+    #dsecond2-icon2 {
+        width: 24px;
+        height: 24px;
+        gap: 8px;
+    }
+
+    #dsecond1-icon2 {
+        width: 24px;
+        height: 24px;
+        gap: 8px;
+    }
+
+    #dsecond3-icon2 {
+        width: 24px;
+        height: 24px;
+        gap: 8px;
+    }
+
+    #dsecond4-icon2 {
+        width: 24px;
+        height: 24px;
+        gap: 8px;
+    }
+
+    #dsecond5-icon2 {
+        width: 24px;
+        height: 24px;
+        gap: 8px;
+    }
+
+    #dadd-product2 {
+        width: 736px;
+        height: 22px;
+        padding: 2px 0px 2px 0px;
+    }
+
+    #dadd-product1 {
+        width: 736px;
+        height: 22px;
+        padding: 2px 0px 2px 0px;
+    }
+
+    #dthird2 {
+        width: 784px;
+        height: 40px;
+        border-radius: 10px;
+        padding: 8px;
+        gap: 120px;
+    }
+
+    #third-detail2 {
+        width: 768px;
+        height: 24px;
+        gap: 8px;
+        display: flex;
+    }
+
+    #second3-icon2 {
+        width: 24px;
+        height: 24px;
+        gap: 8px;
+    }
+
+    #dadd-product3 {
+        width: 736px;
+        height: 22px;
+        padding: 2px 0px 2px 0px;
+    }
+
+    #dfourth2 {
+        width: 784px;
+        height: 40px;
+        border-radius: 10px;
+        padding: 8px;
+        gap: 120px;
+    }
+
+    #fourth-detail2 {
+        width: 768px;
+        height: 24px;
+        gap: 8px;
+        display: flex;
+    }
+
+    #second4-icon2 {
+        width: 24px;
+        height: 24px;
+        gap: 8px;
+    }
+
+    #dadd-product4 {
+        width: 736px;
+        height: 22px;
+        padding: 2px 0px 2px 0px;
+    }
+
+    #dfifth2 {
+        width: 784px;
+        height: 40px;
+        border-radius: 10px;
+        padding: 8px;
+        gap: 120px;
+
+    }
+
+    #fifth-detail2 {
+        width: 768px;
+        height: 24px;
+        gap: 8px;
+        display: flex;
+    }
+
+    #second5-icon2 {
+        width: 24px;
+        height: 24px;
+        gap: 8px;
+    }
+
+    #dadd-product5 {
+        width: 736px;
+        height: 22px;
+        padding: 2px 0px 2px 0px;
+    }
+
+    .firstcontent-p1 {
+        width: 137px;
+        height: 18px;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 18.2px;
+        color: #303030;
+    }
+
+    .firstcontent-p11 {
+        width: 174px;
+        height: 18px;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 18.2px;
+        color: #303030;
+    }
+
+    .fifthcontent-p1 {
+        width: 164px;
+        height: 18px;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 18.2px;
+        color: #303030;
+    }
+
+    .secondcontent-btn2 {
+        width: 112px;
+        height: 28px;
+        border-radius: 6px;
+        padding: 6px 12px 6px 12px;
+        gap: 8px;
+        border: none;
+        white-space: nowrap;
+    }
+
+    .btn-flex {
+        width: 225px;
+        height: 28px;
+        gap: 16px;
+        display: flex;
+        align-items: center;
+    }
+
+    .body {
+        background-color: #f1f1f1;
+        height: 900px;
     }
 }
