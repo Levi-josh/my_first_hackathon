@@ -77,9 +77,14 @@ const fiftholdicon2 = document.getElementById("fiftholdicon2")
 const dfiftholdicon2 = document.getElementById("dfiftholdicon2")
 const dsetuparrow = document.getElementById("setup1")
 const oldarrow2 = document.getElementById("oldarrow2")
-
-
-
+const dcbtn = document.getElementById('mdc-div')
+const dcbtn2 = document.getElementById('menu')
+const mdropdown = document.getElementById("mdropdown-menu")
+const dropdown = document.getElementById("dropdown-menu")
+const notify = document.getElementById("mnotify")
+const notify2 = document.getElementById("notify")
+const notebtn = document.getElementById("mnote-layout")
+const notebtn2 = document.getElementById("bell")
 const checkloading = {
     isloading: 0,
 
@@ -196,7 +201,51 @@ fill-rule="evenodd" clip-rule="evenodd"
 
 
 
+dcbtn.addEventListener("click", () => {
+    const dropdownmenu = window.getComputedStyle(mdropdown)
+    if (dropdownmenu.display === "none") {
+        mdropdown.style.display = "flex";
+        notify.style.display = "none";
+    }
+    else {
+        mdropdown.style.display = "none";
+    }
 
+})
+dcbtn2.addEventListener("click", () => {
+    const dropdownmenu = window.getComputedStyle(dropdown)
+    if (dropdownmenu.display === "none") {
+        dropdown.style.display = "flex";
+        notify2.style.display = "none";
+    }
+    else {
+        dropdown.style.display = "none";
+    }
+
+})
+
+notebtn.addEventListener("click", () => {
+    const dropdownmenu = window.getComputedStyle(notify)
+    if (dropdownmenu.display === "none") {
+        notify.style.display = "flex";
+        mdropdown.style.display = "none";
+    }
+    else {
+        notify.style.display = "none";
+    }
+
+})
+notebtn2.addEventListener("click", () => {
+    const dropdownmenu = window.getComputedStyle(notify2)
+    if (dropdownmenu.display === "none") {
+        notify2.style.display = "flex";
+        dropdown.style.display = "none";
+    }
+    else {
+        notify2.style.display = "none";
+    }
+
+})
 
 /* const showcontent = window.getComputedStyle(content)
  
@@ -503,7 +552,8 @@ changeicon2.addEventListener("click", () => {
 
 
     }, 500)
-
+    checkloading.calculateWidth(18)
+    loading.style.width = checkloading.isloading + "px"
 })
 
 dchangeicon2.addEventListener("click", () => {
@@ -674,6 +724,7 @@ firsticonbtn.addEventListener("click", () => {
         changeicon1.replaceChild(newicon11, newicon1)
         firsticonbtn.replaceChild(newicon111, firstoldicon2);
     }, 500)
+
     checkloading.calculateWidth(18)
     loading.style.width = checkloading.isloading + "px"
 
@@ -808,6 +859,8 @@ changeicon1.addEventListener("click", () => {
         firsticonbtn.replaceChild(newicon111, firstoldicon2);
 
     }, 500)
+    checkloading.calculateWidth(18)
+    loading.style.width = checkloading.isloading + "px"
 })
 dchangeicon1.addEventListener("click", () => {
     const newicon1 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
@@ -1106,6 +1159,8 @@ changeicon3.addEventListener("click", () => {
         thirdiconbtn.replaceChild(newicon333, thirdoldicon2);
 
     }, 500)
+    checkloading.calculateWidth(18)
+    loading.style.width = checkloading.isloading + "px"
 })
 dchangeicon3.addEventListener("click", () => {
 
@@ -1410,6 +1465,8 @@ changeicon4.addEventListener("click", () => {
         fourthiconbtn.replaceChild(newicon444, fourtholdicon2);
 
     }, 500)
+    checkloading.calculateWidth(18)
+    loading.style.width = checkloading.isloading + "px"
 })
 dchangeicon4.addEventListener("click", () => {
 
@@ -1720,6 +1777,8 @@ changeicon5.addEventListener("click", () => {
         fifthiconbtn.replaceChild(newicon555, fiftholdicon2);
 
     }, 500)
+    checkloading.calculateWidth(18)
+    loading.style.width = checkloading.isloading + "px"
 
 })
 dchangeicon5.addEventListener("click", () => {
