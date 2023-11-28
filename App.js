@@ -44,6 +44,7 @@ const dfourthiconbtn = document.getElementById("dsecond4-icon2")
 const fifthiconbtn = document.getElementById("second5-icon2")
 const dfifthiconbtn = document.getElementById("dsecond5-icon2")
 const loading = document.getElementById("loading-span")
+const dloading = document.getElementById("dloading-span")
 const oldicon2 = document.getElementById("secondoldicon")
 const doldicon2 = document.getElementById("dsecondoldicon")
 const oldicon1 = document.getElementById("firstoldicon")
@@ -75,10 +76,23 @@ const dfourtholdicon2 = document.getElementById("dfourtholdicon2")
 const fiftholdicon2 = document.getElementById("fiftholdicon2")
 const dfiftholdicon2 = document.getElementById("dfiftholdicon2")
 const dsetuparrow = document.getElementById("setup1")
+const oldarrow2 = document.getElementById("oldarrow2")
 
 
 
 const checkloading = {
+    isloading: 0,
+
+
+    calculateWidth: function (num) {
+
+
+        this.isloading = this.isloading + num
+
+
+    }
+}
+const dcheckloading = {
     isloading: 0,
 
 
@@ -104,19 +118,80 @@ setupArrow.addEventListener("click", () => {
         setupGuide.style.height = "449px";
     }
 
+
+
 })
 dsetuparrow.addEventListener("click", () => {
     const dshowcontent = window.getComputedStyle(dcontent)
+    const newicon2 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon2.setAttribute('id', 'arrow2')
+    newicon2.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon2.setAttribute('width', '20')
+    newicon2.setAttribute('height', '20')
+    newicon2.setAttribute('viewBox', '0 0 21 20')
+    newicon2.setAttribute('fill', 'none')
+
+    newicon2.innerHTML = `<path
+ fill-rule="evenodd" clip-rule="evenodd" d="M15.0303 12.2803C14.7374 12.5732 14.2626 12.5732 13.9697 12.2803L10.5 8.81066L7.03033 12.2803C6.73744 12.5732 6.26256 12.5732 5.96967 12.2803C5.67678 11.9874 5.67678 11.5126 5.96967 11.2197L9.96967 7.21967C10.2626 6.92678 10.7374 6.92678 11.0303 7.21967L15.0303 11.2197C15.3232 11.5126 15.3232 11.9874 15.0303 12.2803Z" fill="#4A4A4A"
+/>`;
+    const newicon22 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon22.setAttribute('id', 'arrow22')
+    newicon22.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon22.setAttribute('width', '20')
+    newicon22.setAttribute('height', '20')
+    newicon22.setAttribute('viewBox', '0 0 21 20')
+    newicon22.setAttribute('fill', 'none')
+    newicon22.innerHTML = `<path
+fill-rule="evenodd" clip-rule="evenodd"
+ d="M6.21967 8.46967C6.51256 8.17678 6.98744 8.17678 7.28033 8.46967L10.75 11.9393L14.2197 8.46967C14.5126 8.17678 14.9874 8.17678 15.2803 8.46967C15.5732 8.76256 15.5732 9.23744 15.2803 9.53033L11.2803 13.5303C10.9874 13.8232 10.5126 13.8232 10.2197 13.5303L6.21967 9.53033C5.92678 9.23744 5.92678 8.76256 6.21967 8.46967Z"  fill="#4A4A4A"
+/>`;
+
 
     if (dshowcontent.display === "flex") {
+        /*  dcontent.style.display = "none";
+          dsetupGuide.style.height = "106px";
+          const newicon22 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+  
+          newicon22.setAttribute('id', 'arrow22')
+          newicon22.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+          newicon22.setAttribute('width', '20')
+          newicon22.setAttribute('height', '20')
+          newicon22.setAttribute('viewBox', '0 0 21 20')
+          newicon22.setAttribute('fill', 'none')
+          newicon22.innerHTML = `<path
+          fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M6.21967 8.46967C6.51256 8.17678 6.98744 8.17678 7.28033 8.46967L10.75 11.9393L14.2197 8.46967C14.5126 8.17678 14.9874 8.17678 15.2803 8.46967C15.5732 8.76256 15.5732 9.23744 15.2803 9.53033L11.2803 13.5303C10.9874 13.8232 10.5126 13.8232 10.2197 13.5303L6.21967 9.53033C5.92678 9.23744 5.92678 8.76256 6.21967 8.46967Z"
+                                  fill="#4A4A4A"
+          />`;*/
+
+        //dsetuparrow.replaceChild(newicon22, newicon2)
         dcontent.style.display = "none";
         dsetupGuide.style.height = "106px";
+
     }
     else {
+
+        /* const newicon2 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+ 
+         newicon2.setAttribute('id', 'arrow2')
+         newicon2.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+         newicon2.setAttribute('width', '20')
+         newicon2.setAttribute('height', '20')
+         newicon2.setAttribute('viewBox', '0 0 21 20')
+         newicon2.setAttribute('fill', 'none')
+ 
+         newicon2.innerHTML = `<path
+  fill-rule="evenodd" clip-rule="evenodd" d="M15.0303 12.2803C14.7374 12.5732 14.2626 12.5732 13.9697 12.2803L10.5 8.81066L7.03033 12.2803C6.73744 12.5732 6.26256 12.5732 5.96967 12.2803C5.67678 11.9874 5.67678 11.5126 5.96967 11.2197L9.96967 7.21967C10.2626 6.92678 10.7374 6.92678 11.0303 7.21967L15.0303 11.2197C15.3232 11.5126 15.3232 11.9874 15.0303 12.2803Z" fill="#4A4A4A"
+ />`;*/
+
+        //dsetuparrow.replaceChild(newicon2, oldarrow2)
         dcontent.style.display = "flex";
         dsetupGuide.style.height = "431px";
-    }
 
+    }
+    console.log(count)
 })
 
 
@@ -361,7 +436,8 @@ dsecondiconbtn.addEventListener("click", () => {
     }, 500)
 
 
-
+    dcheckloading.calculateWidth(18)
+    dloading.style.width = dcheckloading.isloading + "px"
 
 
 
@@ -490,7 +566,8 @@ dchangeicon2.addEventListener("click", () => {
 
 
     }, 500)
-
+    dcheckloading.calculateWidth(18)
+    dloading.style.width = dcheckloading.isloading + "px"
 })
 
 
@@ -597,7 +674,8 @@ firsticonbtn.addEventListener("click", () => {
         changeicon1.replaceChild(newicon11, newicon1)
         firsticonbtn.replaceChild(newicon111, firstoldicon2);
     }, 500)
-
+    checkloading.calculateWidth(18)
+    loading.style.width = checkloading.isloading + "px"
 
 })
 dfirsticonbtn.addEventListener("click", () => {
@@ -670,7 +748,8 @@ dfirsticonbtn.addEventListener("click", () => {
         dfirsticonbtn.replaceChild(newicon111, dfirstoldicon2);
     }, 500)
 
-
+    dcheckloading.calculateWidth(18)
+    dloading.style.width = dcheckloading.isloading + "px"
 })
 
 changeicon1.addEventListener("click", () => {
@@ -786,6 +865,8 @@ dchangeicon1.addEventListener("click", () => {
         dfirsticonbtn.replaceChild(newicon111, dfirstoldicon2);
 
     }, 500)
+    dcheckloading.calculateWidth(18)
+    dloading.style.width = dcheckloading.isloading + "px"
 })
 
 custombtn.addEventListener("click", () => {
@@ -965,7 +1046,8 @@ dthirdiconbtn.addEventListener("click", () => {
         dthirdiconbtn.replaceChild(newicon333, dthirdoldicon2);
 
     }, 500)
-
+    dcheckloading.calculateWidth(18)
+    dloading.style.width = dcheckloading.isloading + "px"
 })
 changeicon3.addEventListener("click", () => {
 
@@ -1024,6 +1106,66 @@ changeicon3.addEventListener("click", () => {
         thirdiconbtn.replaceChild(newicon333, thirdoldicon2);
 
     }, 500)
+})
+dchangeicon3.addEventListener("click", () => {
+
+    const newicon3 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon3.setAttribute('id', 'dnewicon3')
+    newicon3.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon3.setAttribute('width', '16')
+    newicon3.setAttribute('height', '16')
+    newicon3.setAttribute('viewBox', '0 0 28 28')
+    newicon3.setAttribute('fill', 'none')
+
+    newicon3.innerHTML = `<path
+    d="M26 14C26 16.3734 25.2962 18.6935 23.9776 20.6668C22.6591 22.6402 20.7849 24.1783 18.5922 25.0866C16.3995 25.9948 13.9867 26.2324 11.6589 25.7694C9.33114 25.3064 7.19295 24.1635 5.51472 22.4853C3.83649 20.8071 2.6936 18.6689 2.23058 16.3411C1.76755 14.0133 2.00519 11.6005 2.91345 9.4078C3.8217 7.21509 5.35977 5.34094 7.33316 4.02236C9.30655 2.70379 11.6266 2 14 2"
+    stroke="#000"
+    stroke-width="2.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+/>`;
+
+    dchangeicon3.replaceChild(newicon3, doldicon3)
+
+
+    const newicon33 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon33.setAttribute('id', 'newicon33')
+    newicon33.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon33.setAttribute('width', '20')
+    newicon33.setAttribute('height', '20')
+    newicon33.setAttribute('viewBox', '0 0 24 24')
+    newicon33.setAttribute('fill', 'none')
+
+
+    newicon33.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
+    <path
+        d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+        fill="#fff"
+    ></path>`
+    const newicon333 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon333.setAttribute('id', 'newicon333')
+    newicon333.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon333.setAttribute('width', '20')
+    newicon333.setAttribute('height', '20')
+    newicon333.setAttribute('viewBox', '0 0 24 24')
+    newicon333.setAttribute('fill', 'none')
+
+
+    newicon333.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
+    <path
+        d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+        fill="#fff"
+    ></path>`
+    setTimeout(() => {
+        dchangeicon3.replaceChild(newicon33, newicon3)
+        dthirdiconbtn.replaceChild(newicon333, dthirdoldicon2);
+
+    }, 500)
+    dcheckloading.calculateWidth(18)
+    dloading.style.width = dcheckloading.isloading + "px"
 })
 namestorebtn.addEventListener("click", () => {
     const shownamestore = window.getComputedStyle(namestore)
@@ -1135,6 +1277,82 @@ fourthiconbtn.addEventListener("click", () => {
     checkloading.calculateWidth(18)
     loading.style.width = checkloading.isloading + "px"
 })
+dfourthiconbtn.addEventListener("click", () => {
+    const dshownamestore = window.getComputedStyle(dnamestore)
+    if (dshownamestore.display === "none") {
+        dnamestore.style.display = "flex";
+        dnamestore2.style.display = "none";
+        dcustomizecontent.style.display = "none";
+        dcustomizecontent2.style.display = "block";
+        dshowproductdiv.style.display = "block";
+        dshowproductcontent.style.display = "none";
+        dcustomdomain.style.display = "none";
+        dcustomdomain2.style.display = "block";
+        dpayment.style.display = "none";
+        dpayment2.style.display = "block";
+
+    }
+
+    const newicon4 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon4.setAttribute('id', 'dnewicon4')
+    newicon4.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon4.setAttribute('width', '16')
+    newicon4.setAttribute('height', '16')
+    newicon4.setAttribute('viewBox', '0 0 28 28')
+    newicon4.setAttribute('fill', 'none')
+
+    newicon4.innerHTML = `<path
+    d="M26 14C26 16.3734 25.2962 18.6935 23.9776 20.6668C22.6591 22.6402 20.7849 24.1783 18.5922 25.0866C16.3995 25.9948 13.9867 26.2324 11.6589 25.7694C9.33114 25.3064 7.19295 24.1635 5.51472 22.4853C3.83649 20.8071 2.6936 18.6689 2.23058 16.3411C1.76755 14.0133 2.00519 11.6005 2.91345 9.4078C3.8217 7.21509 5.35977 5.34094 7.33316 4.02236C9.30655 2.70379 11.6266 2 14 2"
+    stroke="#000"
+    stroke-width="2.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+/>`;
+
+    dchangeicon4.replaceChild(newicon4, doldicon4)
+
+    const newicon44 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon44.setAttribute('id', 'newicon44')
+    newicon44.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon44.setAttribute('width', '20')
+    newicon44.setAttribute('height', '20')
+    newicon44.setAttribute('viewBox', '0 0 24 24')
+    newicon44.setAttribute('fill', 'none')
+
+
+    newicon44.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
+    <path
+        d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+        fill="#fff"
+    ></path>`
+
+    const newicon444 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon444.setAttribute('id', 'newicon444')
+    newicon444.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon444.setAttribute('width', '20')
+    newicon444.setAttribute('height', '20')
+    newicon444.setAttribute('viewBox', '0 0 24 24')
+    newicon444.setAttribute('fill', 'none')
+
+
+    newicon444.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
+    <path
+        d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+        fill="#fff"
+    ></path>`
+
+    setTimeout(() => {
+        dchangeicon4.replaceChild(newicon44, newicon4)
+        dfourthiconbtn.replaceChild(newicon444, dfourtholdicon2);
+
+    }, 500)
+    dcheckloading.calculateWidth(18)
+    dloading.style.width = dcheckloading.isloading + "px"
+
+})
 changeicon4.addEventListener("click", () => {
 
     const newicon4 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
@@ -1193,6 +1411,66 @@ changeicon4.addEventListener("click", () => {
 
     }, 500)
 })
+dchangeicon4.addEventListener("click", () => {
+
+    const newicon4 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon4.setAttribute('id', 'dnewicon4')
+    newicon4.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon4.setAttribute('width', '16')
+    newicon4.setAttribute('height', '16')
+    newicon4.setAttribute('viewBox', '0 0 28 28')
+    newicon4.setAttribute('fill', 'none')
+
+    newicon4.innerHTML = `<path
+    d="M26 14C26 16.3734 25.2962 18.6935 23.9776 20.6668C22.6591 22.6402 20.7849 24.1783 18.5922 25.0866C16.3995 25.9948 13.9867 26.2324 11.6589 25.7694C9.33114 25.3064 7.19295 24.1635 5.51472 22.4853C3.83649 20.8071 2.6936 18.6689 2.23058 16.3411C1.76755 14.0133 2.00519 11.6005 2.91345 9.4078C3.8217 7.21509 5.35977 5.34094 7.33316 4.02236C9.30655 2.70379 11.6266 2 14 2"
+    stroke="#000"
+    stroke-width="2.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+/>`;
+
+    dchangeicon4.replaceChild(newicon4, doldicon4)
+
+    const newicon44 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon44.setAttribute('id', 'newicon44')
+    newicon44.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon44.setAttribute('width', '20')
+    newicon44.setAttribute('height', '20')
+    newicon44.setAttribute('viewBox', '0 0 24 24')
+    newicon44.setAttribute('fill', 'none')
+
+
+    newicon44.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
+    <path
+        d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+        fill="#fff"
+    ></path>`
+    const newicon444 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon444.setAttribute('id', 'newicon444')
+    newicon444.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon444.setAttribute('width', '20')
+    newicon444.setAttribute('height', '20')
+    newicon444.setAttribute('viewBox', '0 0 24 24')
+    newicon444.setAttribute('fill', 'none')
+
+
+    newicon444.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
+    <path
+        d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+        fill="#fff"
+    ></path>`
+
+    setTimeout(() => {
+        dchangeicon4.replaceChild(newicon44, newicon4)
+        dfourthiconbtn.replaceChild(newicon444, dfourtholdicon2);
+
+    }, 500)
+    dcheckloading.calculateWidth(18)
+    dloading.style.width = dcheckloading.isloading + "px"
+})
 
 paymentbtn.addEventListener("click", () => {
     const showpayment = window.getComputedStyle(payment)
@@ -1224,7 +1502,7 @@ dpaymentbtn.addEventListener("click", () => {
         dcustomdomain2.style.display = "block";
         dnamestore.style.display = "none";
         dnamestore2.style.display = "block";
-        dsetupGuide.style.height = "449px"
+
 
     }
 })
@@ -1307,6 +1585,84 @@ fifthiconbtn.addEventListener("click", () => {
 
 })
 
+dfifthiconbtn.addEventListener("click", () => {
+
+    const dshowpayment = window.getComputedStyle(dpayment)
+    if (dshowpayment.display === "none") {
+        dpayment.style.display = "flex";
+        dpayment2.style.display = "none";
+        dcustomizecontent.style.display = "none";
+        dcustomizecontent2.style.display = "block";
+        dshowproductdiv.style.display = "block";
+        dshowproductcontent.style.display = "none";
+        dcustomdomain.style.display = "none";
+        dcustomdomain2.style.display = "block";
+        dnamestore.style.display = "none";
+        dnamestore2.style.display = "block";
+
+    }
+    const newicon5 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon5.setAttribute('id', 'dnewicon5')
+    newicon5.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon5.setAttribute('width', '16')
+    newicon5.setAttribute('height', '16')
+    newicon5.setAttribute('viewBox', '0 0 28 28')
+    newicon5.setAttribute('fill', 'none')
+
+    newicon5.innerHTML = `<path
+    d="M26 14C26 16.3734 25.2962 18.6935 23.9776 20.6668C22.6591 22.6402 20.7849 24.1783 18.5922 25.0866C16.3995 25.9948 13.9867 26.2324 11.6589 25.7694C9.33114 25.3064 7.19295 24.1635 5.51472 22.4853C3.83649 20.8071 2.6936 18.6689 2.23058 16.3411C1.76755 14.0133 2.00519 11.6005 2.91345 9.4078C3.8217 7.21509 5.35977 5.34094 7.33316 4.02236C9.30655 2.70379 11.6266 2 14 2"
+    stroke="#000"
+    stroke-width="2.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+/>`;
+
+    dchangeicon5.replaceChild(newicon5, doldicon5)
+
+
+
+    const newicon55 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon55.setAttribute('id', 'newicon55')
+    newicon55.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon55.setAttribute('width', '20')
+    newicon55.setAttribute('height', '20')
+    newicon55.setAttribute('viewBox', '0 0 24 24')
+    newicon55.setAttribute('fill', 'none')
+
+
+    newicon55.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
+    <path
+        d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+        fill="#fff"
+    ></path>`
+
+    const newicon555 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon555.setAttribute('id', 'newicon555')
+    newicon555.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon555.setAttribute('width', '20')
+    newicon555.setAttribute('height', '20')
+    newicon555.setAttribute('viewBox', '0 0 24 24')
+    newicon555.setAttribute('fill', 'none')
+
+
+    newicon555.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
+    <path
+        d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+        fill="#fff"
+    ></path>`
+    setTimeout(() => {
+        dchangeicon5.replaceChild(newicon55, newicon5)
+        dfifthiconbtn.replaceChild(newicon555, dfiftholdicon2);
+
+    }, 500)
+
+    dcheckloading.calculateWidth(18)
+    dloading.style.width = dcheckloading.isloading + "px"
+})
+
 changeicon5.addEventListener("click", () => {
     const newicon5 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
 
@@ -1365,6 +1721,66 @@ changeicon5.addEventListener("click", () => {
 
     }, 500)
 
+})
+dchangeicon5.addEventListener("click", () => {
+    const newicon5 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon5.setAttribute('id', 'dnewicon5')
+    newicon5.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon5.setAttribute('width', '16')
+    newicon5.setAttribute('height', '16')
+    newicon5.setAttribute('viewBox', '0 0 28 28')
+    newicon5.setAttribute('fill', 'none')
+
+    newicon5.innerHTML = `<path
+    d="M26 14C26 16.3734 25.2962 18.6935 23.9776 20.6668C22.6591 22.6402 20.7849 24.1783 18.5922 25.0866C16.3995 25.9948 13.9867 26.2324 11.6589 25.7694C9.33114 25.3064 7.19295 24.1635 5.51472 22.4853C3.83649 20.8071 2.6936 18.6689 2.23058 16.3411C1.76755 14.0133 2.00519 11.6005 2.91345 9.4078C3.8217 7.21509 5.35977 5.34094 7.33316 4.02236C9.30655 2.70379 11.6266 2 14 2"
+    stroke="#000"
+    stroke-width="2.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+/>`;
+
+    dchangeicon5.replaceChild(newicon5, doldicon5)
+
+
+
+    const newicon55 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon55.setAttribute('id', 'newicon55')
+    newicon55.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon55.setAttribute('width', '20')
+    newicon55.setAttribute('height', '20')
+    newicon55.setAttribute('viewBox', '0 0 24 24')
+    newicon55.setAttribute('fill', 'none')
+
+
+    newicon55.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
+    <path
+        d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+        fill="#fff"
+    ></path>`
+    const newicon555 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+    newicon555.setAttribute('id', 'newicon555')
+    newicon555.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    newicon555.setAttribute('width', '20')
+    newicon555.setAttribute('height', '20')
+    newicon555.setAttribute('viewBox', '0 0 24 24')
+    newicon555.setAttribute('fill', 'none')
+
+
+    newicon555.innerHTML = `<circle cx="12" cy="12" r="10" fill="#303030"></circle>
+    <path
+        d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+        fill="#fff"
+    ></path>`
+    setTimeout(() => {
+        dchangeicon5.replaceChild(newicon55, newicon5)
+        dfifthiconbtn.replaceChild(newicon555, dfiftholdicon2);
+
+    }, 500)
+    dcheckloading.calculateWidth(18)
+    dloading.style.width = dcheckloading.isloading + "px"
 })
 
 console.log(checkloading.isloading)
