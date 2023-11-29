@@ -117,7 +117,7 @@
         font-size: 13px;
     }
 
-    .trial-div {
+    #trial-div {
         width: 390px;
         height: 104px;
         padding: 12px 8px 12px 8px;
@@ -177,7 +177,7 @@
 
     }
 
-    .trial-times {
+    #trial-times {
         width: 36px;
         height: 36px;
         border-radius: 10px;
@@ -1320,6 +1320,7 @@
         background-color: #1A1A1A;
         display: flex;
         justify-content: space-between;
+        z-index: 7;
     }
 
     .logo {
@@ -1455,6 +1456,26 @@
 
     }
 
+    #dfirst-icon:hover {
+        cursor: pointer;
+    }
+
+    #dsecond-icon:hover {
+        cursor: pointer;
+    }
+
+    #dthird-icon:hover {
+        cursor: pointer;
+    }
+
+    #dfourth-icon:hover {
+        cursor: pointer;
+    }
+
+    #dfifth-icon:hover {
+        cursor: pointer;
+    }
+
     .dc {
         width: 28px;
         height: 28px;
@@ -1479,6 +1500,7 @@
 
     .section {
         width: 800px;
+        /*position: fixed;*/
 
         padding-top: 88px;
         gap: 16px;
@@ -1488,7 +1510,7 @@
 
     }
 
-    .select-plan {
+    #select-plan {
         width: 800px;
         height: 56px;
         border-radius: 8px;
@@ -1497,6 +1519,7 @@
         padding: 12px 8px 12px 16px;
         background-color: #1A1A1A;
         align-items: center;
+        position: absolute;
     }
 
     .extend-trial {
@@ -1549,7 +1572,7 @@
 
     }
 
-    .times-icon {
+    #times-icon {
         width: 32px;
         height: 32px;
         border-radius: 6px;
@@ -1559,7 +1582,7 @@
 
     #d-setup-guide {
         width: 800px;
-
+        margin-top: 70px;
         border-radius: 18px;
         padding: 8px;
         gap: 16px;
@@ -1569,12 +1592,16 @@
 
     }
 
-    .guide1 {
+    #guide1 {
         width: 784px;
         height: 90px;
         justify-content: space-between;
         display: flex;
         padding: 8px;
+    }
+
+    #guide1:focus {
+        outline: none;
     }
 
     .guide2 {
@@ -1894,6 +1921,10 @@
 
     }
 
+    #dcontent:focus {
+        outline: none;
+    }
+
     .firstcontent-p25 {
         width: 483.86px;
         height: 57px;
@@ -2192,7 +2223,7 @@
 
     .body {
         background-color: #f1f1f1;
-        height: 900px;
+        height: 700px;
     }
 
     #dnewicon2 {
@@ -2405,6 +2436,26 @@
         border-radius: 8px;
     }
 
+    .menu1:focus {
+        box-shadow: 0 0 0 3px #005BD3;
+    }
+
+    .menu2:focus {
+        box-shadow: 0 0 0 3px #005BD3;
+    }
+
+    .menu3:focus {
+        box-shadow: 0 0 0 3px #005BD3;
+    }
+
+    .menu4:focus {
+        box-shadow: 0 0 0 3px #005BD3;
+    }
+
+    .menu5:focus {
+        box-shadow: 0 0 0 3px #005BD3;
+    }
+
     .menu2 {
         width: 308px;
         height: 30px;
@@ -2494,6 +2545,18 @@
         border-radius: 8px;
         padding: 8px;
 
+    }
+
+    .footer1:focus {
+        box-shadow: 0 0 0 3px #005BD3;
+    }
+
+    .footer2:focus {
+        box-shadow: 0 0 0 3px #005BD3;
+    }
+
+    .footer3:focus {
+        box-shadow: 0 0 0 3px #005BD3;
     }
 
     .footer2 {

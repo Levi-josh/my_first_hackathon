@@ -85,28 +85,48 @@ const notify = document.getElementById("mnotify")
 const notify2 = document.getElementById("notify")
 const notebtn = document.getElementById("mnote-layout")
 const notebtn2 = document.getElementById("bell")
+const bar = document.getElementById("guide1")
+const number1 = document.getElementById('number1')
+const number2 = document.getElementById('number2')
+const cancel = document.getElementById("times-icon")
+const cancel2 = document.getElementById("trial-times")
+const trial = document.getElementById("select-plan")
+const trial2 = document.getElementById("trial-div")
+
+
+cancel.addEventListener("click", () => {
+    trial.style.display = "none"
+})
+cancel2.addEventListener("click", () => {
+    trial2.style.display = "none"
+})
 const checkloading = {
     isloading: 0,
+    count: 0,
 
+    calculateWidth: function (num1, num2) {
 
-    calculateWidth: function (num) {
-
-
-        this.isloading = this.isloading + num
+        this.count = this.count + num2
+        this.isloading = this.isloading + num1
 
 
     }
 }
 const dcheckloading = {
     isloading: 0,
+    count: 0,
+
+    calculateWidth: function (num1, num2) {
+
+        this.count = this.count + num2
+
+        this.isloading = this.isloading + num1
 
 
-    calculateWidth: function (num) {
-
-
-        this.isloading = this.isloading + num
-
-
+    },
+    minusWidth: function (num1, num2) {
+        this.count = this.count - num2
+        this.isloading = this.isloading - num1
     }
 }
 
@@ -128,75 +148,28 @@ setupArrow.addEventListener("click", () => {
 })
 dsetuparrow.addEventListener("click", () => {
     const dshowcontent = window.getComputedStyle(dcontent)
-    const newicon2 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
-
-    newicon2.setAttribute('id', 'arrow2')
-    newicon2.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
-    newicon2.setAttribute('width', '20')
-    newicon2.setAttribute('height', '20')
-    newicon2.setAttribute('viewBox', '0 0 21 20')
-    newicon2.setAttribute('fill', 'none')
-
-    newicon2.innerHTML = `<path
- fill-rule="evenodd" clip-rule="evenodd" d="M15.0303 12.2803C14.7374 12.5732 14.2626 12.5732 13.9697 12.2803L10.5 8.81066L7.03033 12.2803C6.73744 12.5732 6.26256 12.5732 5.96967 12.2803C5.67678 11.9874 5.67678 11.5126 5.96967 11.2197L9.96967 7.21967C10.2626 6.92678 10.7374 6.92678 11.0303 7.21967L15.0303 11.2197C15.3232 11.5126 15.3232 11.9874 15.0303 12.2803Z" fill="#4A4A4A"
-/>`;
-    const newicon22 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
-
-    newicon22.setAttribute('id', 'arrow22')
-    newicon22.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
-    newicon22.setAttribute('width', '20')
-    newicon22.setAttribute('height', '20')
-    newicon22.setAttribute('viewBox', '0 0 21 20')
-    newicon22.setAttribute('fill', 'none')
-    newicon22.innerHTML = `<path
-fill-rule="evenodd" clip-rule="evenodd"
- d="M6.21967 8.46967C6.51256 8.17678 6.98744 8.17678 7.28033 8.46967L10.75 11.9393L14.2197 8.46967C14.5126 8.17678 14.9874 8.17678 15.2803 8.46967C15.5732 8.76256 15.5732 9.23744 15.2803 9.53033L11.2803 13.5303C10.9874 13.8232 10.5126 13.8232 10.2197 13.5303L6.21967 9.53033C5.92678 9.23744 5.92678 8.76256 6.21967 8.46967Z"  fill="#4A4A4A"
-/>`;
-
-
     if (dshowcontent.display === "flex") {
-        /*  dcontent.style.display = "none";
-          dsetupGuide.style.height = "106px";
-          const newicon22 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
-  
-          newicon22.setAttribute('id', 'arrow22')
-          newicon22.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
-          newicon22.setAttribute('width', '20')
-          newicon22.setAttribute('height', '20')
-          newicon22.setAttribute('viewBox', '0 0 21 20')
-          newicon22.setAttribute('fill', 'none')
-          newicon22.innerHTML = `<path
-          fill-rule="evenodd" clip-rule="evenodd"
-                                  d="M6.21967 8.46967C6.51256 8.17678 6.98744 8.17678 7.28033 8.46967L10.75 11.9393L14.2197 8.46967C14.5126 8.17678 14.9874 8.17678 15.2803 8.46967C15.5732 8.76256 15.5732 9.23744 15.2803 9.53033L11.2803 13.5303C10.9874 13.8232 10.5126 13.8232 10.2197 13.5303L6.21967 9.53033C5.92678 9.23744 5.92678 8.76256 6.21967 8.46967Z"
-                                  fill="#4A4A4A"
-          />`;*/
-
-        //dsetuparrow.replaceChild(newicon22, newicon2)
+        dsetuparrow.innerHTML = `<svg id="oldarrow2" width="20" height="20" viewBox="0 0 21 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M6.21967 8.46967C6.51256 8.17678 6.98744 8.17678 7.28033 8.46967L10.75 11.9393L14.2197 8.46967C14.5126 8.17678 14.9874 8.17678 15.2803 8.46967C15.5732 8.76256 15.5732 9.23744 15.2803 9.53033L11.2803 13.5303C10.9874 13.8232 10.5126 13.8232 10.2197 13.5303L6.21967 9.53033C5.92678 9.23744 5.92678 8.76256 6.21967 8.46967Z"
+                                fill="#4A4A4A" />
+                        </svg>`
         dcontent.style.display = "none";
         dsetupGuide.style.height = "106px";
 
     }
     else {
-
-        /* const newicon2 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
- 
-         newicon2.setAttribute('id', 'arrow2')
-         newicon2.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
-         newicon2.setAttribute('width', '20')
-         newicon2.setAttribute('height', '20')
-         newicon2.setAttribute('viewBox', '0 0 21 20')
-         newicon2.setAttribute('fill', 'none')
- 
-         newicon2.innerHTML = `<path
-  fill-rule="evenodd" clip-rule="evenodd" d="M15.0303 12.2803C14.7374 12.5732 14.2626 12.5732 13.9697 12.2803L10.5 8.81066L7.03033 12.2803C6.73744 12.5732 6.26256 12.5732 5.96967 12.2803C5.67678 11.9874 5.67678 11.5126 5.96967 11.2197L9.96967 7.21967C10.2626 6.92678 10.7374 6.92678 11.0303 7.21967L15.0303 11.2197C15.3232 11.5126 15.3232 11.9874 15.0303 12.2803Z" fill="#4A4A4A"
- />`;*/
-
-        //dsetuparrow.replaceChild(newicon2, oldarrow2)
+        dsetuparrow.innerHTML = `<svg width="20" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0303 12.2803C14.7374 12.5732 14.2626 12.5732 13.9697 12.2803L10.5 8.81066L7.03033 12.2803C6.73744 12.5732 6.26256 12.5732 5.96967 12.2803C5.67678 11.9874 5.67678 11.5126 5.96967 11.2197L9.96967 7.21967C10.2626 6.92678 10.7374 6.92678 11.0303 7.21967L15.0303 11.2197C15.3232 11.5126 15.3232 11.9874 15.0303 12.2803Z" fill="#4A4A4A"/>
+    </svg>
+    `
         dcontent.style.display = "flex";
         dsetupGuide.style.height = "431px";
 
+
     }
-    console.log(count)
+
 })
 
 
@@ -270,18 +243,166 @@ notebtn2.addEventListener("click", () => {
         setupGuide.style.height = "449px";
     }
     console.log('hello')
-};
+};*/
 
-// Your code here
-setupArrow.addEventListener("keydown", ev => {
 
-    console.log(ev.key);
-    console.log("hello");
+
+/*document.body*/ bar.addEventListener("keydown", (ev) => {
+    if (ev.key === "Enter") {
+        const dshowcontent = window.getComputedStyle(dcontent)
+        const newicon2 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+        newicon2.setAttribute('id', 'arrow2')
+        newicon2.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+        newicon2.setAttribute('width', '20')
+        newicon2.setAttribute('height', '20')
+        newicon2.setAttribute('viewBox', '0 0 21 20')
+        newicon2.setAttribute('fill', 'none')
+
+        newicon2.innerHTML = `<path
+ fill-rule="evenodd" clip-rule="evenodd" d="M15.0303 12.2803C14.7374 12.5732 14.2626 12.5732 13.9697 12.2803L10.5 8.81066L7.03033 12.2803C6.73744 12.5732 6.26256 12.5732 5.96967 12.2803C5.67678 11.9874 5.67678 11.5126 5.96967 11.2197L9.96967 7.21967C10.2626 6.92678 10.7374 6.92678 11.0303 7.21967L15.0303 11.2197C15.3232 11.5126 15.3232 11.9874 15.0303 12.2803Z" fill="#4A4A4A"
+/>`;
+        const newicon22 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+        newicon22.setAttribute('id', 'arrow22')
+        newicon22.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+        newicon22.setAttribute('width', '20')
+        newicon22.setAttribute('height', '20')
+        newicon22.setAttribute('viewBox', '0 0 21 20')
+        newicon22.setAttribute('fill', 'none')
+        newicon22.innerHTML = `<path
+fill-rule="evenodd" clip-rule="evenodd"
+ d="M6.21967 8.46967C6.51256 8.17678 6.98744 8.17678 7.28033 8.46967L10.75 11.9393L14.2197 8.46967C14.5126 8.17678 14.9874 8.17678 15.2803 8.46967C15.5732 8.76256 15.5732 9.23744 15.2803 9.53033L11.2803 13.5303C10.9874 13.8232 10.5126 13.8232 10.2197 13.5303L6.21967 9.53033C5.92678 9.23744 5.92678 8.76256 6.21967 8.46967Z"  fill="#4A4A4A"
+/>`;
+
+
+        if (dshowcontent.display === "none") {
+            /*  dcontent.style.display = "none";
+              dsetupGuide.style.height = "106px";
+              const newicon22 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+      
+              newicon22.setAttribute('id', 'arrow22')
+              newicon22.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+              newicon22.setAttribute('width', '20')
+              newicon22.setAttribute('height', '20')
+              newicon22.setAttribute('viewBox', '0 0 21 20')
+              newicon22.setAttribute('fill', 'none')
+              newicon22.innerHTML = `<path
+              fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M6.21967 8.46967C6.51256 8.17678 6.98744 8.17678 7.28033 8.46967L10.75 11.9393L14.2197 8.46967C14.5126 8.17678 14.9874 8.17678 15.2803 8.46967C15.5732 8.76256 15.5732 9.23744 15.2803 9.53033L11.2803 13.5303C10.9874 13.8232 10.5126 13.8232 10.2197 13.5303L6.21967 9.53033C5.92678 9.23744 5.92678 8.76256 6.21967 8.46967Z"
+                                      fill="#4A4A4A"
+              />`;*/
+
+            //dsetuparrow.replaceChild(newicon22, newicon2)
+            dcontent.style.display = "flex";
+            dsetupGuide.style.height = "106px";
+
+        }
+    }
+
+    if (ev.key === "Escape") {
+        const dshowcontent = window.getComputedStyle(dcontent)
+        const newicon2 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+        newicon2.setAttribute('id', 'arrow2')
+        newicon2.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+        newicon2.setAttribute('width', '20')
+        newicon2.setAttribute('height', '20')
+        newicon2.setAttribute('viewBox', '0 0 21 20')
+        newicon2.setAttribute('fill', 'none')
+
+        newicon2.innerHTML = `<path
+ fill-rule="evenodd" clip-rule="evenodd" d="M15.0303 12.2803C14.7374 12.5732 14.2626 12.5732 13.9697 12.2803L10.5 8.81066L7.03033 12.2803C6.73744 12.5732 6.26256 12.5732 5.96967 12.2803C5.67678 11.9874 5.67678 11.5126 5.96967 11.2197L9.96967 7.21967C10.2626 6.92678 10.7374 6.92678 11.0303 7.21967L15.0303 11.2197C15.3232 11.5126 15.3232 11.9874 15.0303 12.2803Z" fill="#4A4A4A"
+/>`;
+        const newicon22 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+
+        newicon22.setAttribute('id', 'arrow22')
+        newicon22.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+        newicon22.setAttribute('width', '20')
+        newicon22.setAttribute('height', '20')
+        newicon22.setAttribute('viewBox', '0 0 21 20')
+        newicon22.setAttribute('fill', 'none')
+        newicon22.innerHTML = `<path
+fill-rule="evenodd" clip-rule="evenodd"
+ d="M6.21967 8.46967C6.51256 8.17678 6.98744 8.17678 7.28033 8.46967L10.75 11.9393L14.2197 8.46967C14.5126 8.17678 14.9874 8.17678 15.2803 8.46967C15.5732 8.76256 15.5732 9.23744 15.2803 9.53033L11.2803 13.5303C10.9874 13.8232 10.5126 13.8232 10.2197 13.5303L6.21967 9.53033C5.92678 9.23744 5.92678 8.76256 6.21967 8.46967Z"  fill="#4A4A4A"
+/>`;
+        if (dshowcontent.display === "flex") {
+            /*  dcontent.style.display = "none";
+              dsetupGuide.style.height = "106px";
+              const newicon22 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+      
+              newicon22.setAttribute('id', 'arrow22')
+              newicon22.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+              newicon22.setAttribute('width', '20')
+              newicon22.setAttribute('height', '20')
+              newicon22.setAttribute('viewBox', '0 0 21 20')
+              newicon22.setAttribute('fill', 'none')
+              newicon22.innerHTML = `<path
+              fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M6.21967 8.46967C6.51256 8.17678 6.98744 8.17678 7.28033 8.46967L10.75 11.9393L14.2197 8.46967C14.5126 8.17678 14.9874 8.17678 15.2803 8.46967C15.5732 8.76256 15.5732 9.23744 15.2803 9.53033L11.2803 13.5303C10.9874 13.8232 10.5126 13.8232 10.2197 13.5303L6.21967 9.53033C5.92678 9.23744 5.92678 8.76256 6.21967 8.46967Z"
+                                      fill="#4A4A4A"
+              />`;*/
+
+            //dsetuparrow.replaceChild(newicon22, newicon2)
+            dcontent.style.display = "none";
+            dsetupGuide.style.height = "106px";
+
+        }
+    }
+
+
 
 });
+dcontent.addEventListener("keydown", (ev) => {
 
-let addloading = 0
-loading.style.width = addloading*/
+    if (ev.key === "ArrowDown") {
+        const showaddproduct = window.getComputedStyle(dshowproductcontent)
+        const dshowcustomcontent = window.getComputedStyle(dcustomizecontent)
+        const dshowcustomdomain = window.getComputedStyle(dcustomdomain)
+        const dshownamestore = window.getComputedStyle(dnamestore)
+        const dshowpayment = window.getComputedStyle(dpayment)
+        if (showaddproduct.display === "flex") {
+
+            dshowproductdiv.style.display = "block";
+            dshowproductcontent.style.display = "none";
+            dcustomdomain.style.display = "flex";
+            dcustomdomain2.style.display = "none";
+
+
+        }
+        if (dshowcustomcontent.display === "flex") {
+            dcustomizecontent.style.display = "none";
+            dshowproductcontent.style.display = "flex";
+            dcustomizecontent2.style.display = "block";
+            dshowproductdiv.style.display = "none";
+
+        }
+        if (dshowcustomdomain.display === "flex") {
+            dcustomdomain.style.display = "none";
+            dcustomdomain2.style.display = "block";
+            dnamestore.style.display = "flex";
+            dnamestore2.style.display = "none";
+
+        }
+        if (dshownamestore.display === "flex") {
+            dnamestore.style.display = "none";
+            dnamestore2.style.display = "block";
+            dpayment.style.display = "flex";
+            dpayment2.style.display = "none";
+
+        }
+        if (dshowpayment.display === "flex") {
+            dpayment.style.display = "none";
+            dpayment2.style.display = "block";
+            dcustomizecontent.style.display = "flex";
+            dcustomizecontent2.style.display = "none";
+
+        }
+    }
+    console.log(ev.key)
+})
+
+
 
 addproductBtn.addEventListener("click", () => {
     const showaddproduct = window.getComputedStyle(showproductcontent)
@@ -334,8 +455,11 @@ secondiconbtn.addEventListener("click", () => {
         payment.style.display = "none";
         payment2.style.display = "block";
     }
-    checkloading.calculateWidth(18)
-    loading.style.width = checkloading.isloading + "px"
+    checkloading.calculateWidth(18, 1)
+    loading.style.width = checkloading.isloading + "px";
+    number2.innerText = checkloading.count
+
+
     const newicon2 = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
 
     newicon2.setAttribute('id', 'newicon2')
@@ -485,9 +609,9 @@ dsecondiconbtn.addEventListener("click", () => {
     }, 500)
 
 
-    dcheckloading.calculateWidth(18)
+    dcheckloading.calculateWidth(18, 1)
     dloading.style.width = dcheckloading.isloading + "px"
-
+    number1.innerText = dcheckloading.count
 
 
 })
@@ -552,8 +676,9 @@ changeicon2.addEventListener("click", () => {
 
 
     }, 500)
-    checkloading.calculateWidth(18)
+    checkloading.calculateWidth(18, 1)
     loading.style.width = checkloading.isloading + "px"
+    number2.innerText = checkloading.count
 })
 
 dchangeicon2.addEventListener("click", () => {
@@ -616,8 +741,9 @@ dchangeicon2.addEventListener("click", () => {
 
 
     }, 500)
-    dcheckloading.calculateWidth(18)
+    dcheckloading.calculateWidth(18, 1)
     dloading.style.width = dcheckloading.isloading + "px"
+    number1.innerText = dcheckloading.count
 })
 
 
@@ -656,6 +782,7 @@ dcustomizebtn.addEventListener("click", () => {
 })
 
 firsticonbtn.addEventListener("click", () => {
+
     const showcustomcontent = window.getComputedStyle(customizecontent)
     if (showcustomcontent.display === "none") {
         customizecontent.style.display = "block";
@@ -725,8 +852,11 @@ firsticonbtn.addEventListener("click", () => {
         firsticonbtn.replaceChild(newicon111, firstoldicon2);
     }, 500)
 
-    checkloading.calculateWidth(18)
+
+    checkloading.calculateWidth(18, 1)
     loading.style.width = checkloading.isloading + "px"
+    number2.innerText = checkloading.count
+
 
 })
 dfirsticonbtn.addEventListener("click", () => {
@@ -799,8 +929,9 @@ dfirsticonbtn.addEventListener("click", () => {
         dfirsticonbtn.replaceChild(newicon111, dfirstoldicon2);
     }, 500)
 
-    dcheckloading.calculateWidth(18)
+    dcheckloading.calculateWidth(18, 1)
     dloading.style.width = dcheckloading.isloading + "px"
+    number1.innerText = dcheckloading.count
 })
 
 changeicon1.addEventListener("click", () => {
@@ -859,7 +990,7 @@ changeicon1.addEventListener("click", () => {
         firsticonbtn.replaceChild(newicon111, firstoldicon2);
 
     }, 500)
-    checkloading.calculateWidth(18)
+    checkloading.calculateWidth(18, 1)
     loading.style.width = checkloading.isloading + "px"
 })
 dchangeicon1.addEventListener("click", () => {
@@ -918,8 +1049,9 @@ dchangeicon1.addEventListener("click", () => {
         dfirsticonbtn.replaceChild(newicon111, dfirstoldicon2);
 
     }, 500)
-    dcheckloading.calculateWidth(18)
+    dcheckloading.calculateWidth(18, 1)
     dloading.style.width = dcheckloading.isloading + "px"
+    number1.innerText = dcheckloading.count
 })
 
 custombtn.addEventListener("click", () => {
@@ -1025,8 +1157,9 @@ thirdiconbtn.addEventListener("click", () => {
         thirdiconbtn.replaceChild(newicon333, thirdoldicon2);
 
     }, 500)
-    checkloading.calculateWidth(18)
+    checkloading.calculateWidth(18, 1)
     loading.style.width = checkloading.isloading + "px"
+    number2.innerText = checkloading.count
 })
 dthirdiconbtn.addEventListener("click", () => {
     const dshowcustomcontent = window.getComputedStyle(dcustomdomain)
@@ -1099,8 +1232,9 @@ dthirdiconbtn.addEventListener("click", () => {
         dthirdiconbtn.replaceChild(newicon333, dthirdoldicon2);
 
     }, 500)
-    dcheckloading.calculateWidth(18)
+    dcheckloading.calculateWidth(18, 1)
     dloading.style.width = dcheckloading.isloading + "px"
+    number1.innerText = dcheckloading.count
 })
 changeicon3.addEventListener("click", () => {
 
@@ -1159,8 +1293,9 @@ changeicon3.addEventListener("click", () => {
         thirdiconbtn.replaceChild(newicon333, thirdoldicon2);
 
     }, 500)
-    checkloading.calculateWidth(18)
+    checkloading.calculateWidth(18, 1)
     loading.style.width = checkloading.isloading + "px"
+    number2.innerText = checkloading.count
 })
 dchangeicon3.addEventListener("click", () => {
 
@@ -1219,8 +1354,9 @@ dchangeicon3.addEventListener("click", () => {
         dthirdiconbtn.replaceChild(newicon333, dthirdoldicon2);
 
     }, 500)
-    dcheckloading.calculateWidth(18)
+    dcheckloading.calculateWidth(18, 1)
     dloading.style.width = dcheckloading.isloading + "px"
+    number1.innerText = dcheckloading.count
 })
 namestorebtn.addEventListener("click", () => {
     const shownamestore = window.getComputedStyle(namestore)
@@ -1329,8 +1465,9 @@ fourthiconbtn.addEventListener("click", () => {
 
     }, 500)
 
-    checkloading.calculateWidth(18)
+    checkloading.calculateWidth(18, 1)
     loading.style.width = checkloading.isloading + "px"
+    number2.innerText = checkloading.count
 })
 dfourthiconbtn.addEventListener("click", () => {
     const dshownamestore = window.getComputedStyle(dnamestore)
@@ -1404,8 +1541,9 @@ dfourthiconbtn.addEventListener("click", () => {
         dfourthiconbtn.replaceChild(newicon444, dfourtholdicon2);
 
     }, 500)
-    dcheckloading.calculateWidth(18)
+    dcheckloading.calculateWidth(18, 1)
     dloading.style.width = dcheckloading.isloading + "px"
+    number1.innerText = dcheckloading.count
 
 })
 changeicon4.addEventListener("click", () => {
@@ -1465,8 +1603,9 @@ changeicon4.addEventListener("click", () => {
         fourthiconbtn.replaceChild(newicon444, fourtholdicon2);
 
     }, 500)
-    checkloading.calculateWidth(18)
+    checkloading.calculateWidth(18, 1)
     loading.style.width = checkloading.isloading + "px"
+    number2.innerText = checkloading.count
 })
 dchangeicon4.addEventListener("click", () => {
 
@@ -1525,8 +1664,9 @@ dchangeicon4.addEventListener("click", () => {
         dfourthiconbtn.replaceChild(newicon444, dfourtholdicon2);
 
     }, 500)
-    dcheckloading.calculateWidth(18)
+    dcheckloading.calculateWidth(18, 1)
     dloading.style.width = dcheckloading.isloading + "px"
+    number1.innerText = dcheckloading.count
 })
 
 paymentbtn.addEventListener("click", () => {
@@ -1637,8 +1777,9 @@ fifthiconbtn.addEventListener("click", () => {
         fifthiconbtn.replaceChild(newicon555, fiftholdicon2);
 
     }, 500)
-    checkloading.calculateWidth(18)
+    checkloading.calculateWidth(18, 1)
     loading.style.width = checkloading.isloading + "px"
+    number2.innerText = checkloading.count
 
 })
 
@@ -1716,8 +1857,9 @@ dfifthiconbtn.addEventListener("click", () => {
 
     }, 500)
 
-    dcheckloading.calculateWidth(18)
+    dcheckloading.calculateWidth(18, 1)
     dloading.style.width = dcheckloading.isloading + "px"
+    number1.innerText = dcheckloading.count
 })
 
 changeicon5.addEventListener("click", () => {
@@ -1777,8 +1919,9 @@ changeicon5.addEventListener("click", () => {
         fifthiconbtn.replaceChild(newicon555, fiftholdicon2);
 
     }, 500)
-    checkloading.calculateWidth(18)
+    checkloading.calculateWidth(18, 1)
     loading.style.width = checkloading.isloading + "px"
+    number2.innerText = checkloading.count
 
 })
 dchangeicon5.addEventListener("click", () => {
@@ -1838,8 +1981,9 @@ dchangeicon5.addEventListener("click", () => {
         dfifthiconbtn.replaceChild(newicon555, dfiftholdicon2);
 
     }, 500)
-    dcheckloading.calculateWidth(18)
+    dcheckloading.calculateWidth(18, 1)
     dloading.style.width = dcheckloading.isloading + "px"
+    number1.innerText = dcheckloading.count
 })
 
-console.log(checkloading.isloading)
+
